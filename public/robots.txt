@@ -1,4 +1,6 @@
 # Allow all user agents.
 User-agent: *
 Allow: /
-Disallow: /projects/
+
+User-agent: *
+Disallow: /projects
