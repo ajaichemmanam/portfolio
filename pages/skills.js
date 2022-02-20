@@ -1,5 +1,12 @@
 import { BadgeCheckIcon, ChipIcon } from "@heroicons/react/solid";
-var skills = ["javascript", "python"];
+var skills = [
+  "Javascript",
+  "Python",
+  "ReactJS",
+  "Tensorflow",
+  "NextJS",
+  "PyTorch",
+];
 export default function Skills() {
   return (
     <section id="skills">
@@ -10,9 +17,9 @@ export default function Skills() {
             Skills &amp; Technologies
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sit
-            ipsa delectus eum quo voluptas aspernatur accusantium distinctio
-            possimus est.
+            3 Years of research experience in AI and ML (Computer Vision).
+            <br /> 4 Years of industry experience in building and deploying
+            webapps for IoT Dashbords, Chatbots, AI enabled apps etc.
           </p>
         </div>
         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
