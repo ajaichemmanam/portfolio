@@ -4,3 +4,6 @@ Allow: /
 
 User-agent: *
 Disallow: /projects
+
+User-agent: *
+Sitemap: https://ajaichemmanam.vercel.app/sitemap.xml
