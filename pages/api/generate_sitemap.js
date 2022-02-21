@@ -1,5 +1,6 @@
 import fs from "fs";
 import process from "process";
+import { getAllPostIds } from "../../lib/posts";
 export const generateSitemap = async (posts) => {
   var BASE_URL = "https://www.ajaichemmanam.vercel.app";
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -27,3 +28,9 @@ ${[...posts]
   console.log(`generated sitemap`);
   return sitemap;
 };
+
+export default async function generate_sitemap(req, res) {
+  const posts = await getAllPostIds();
+  var sitemap = await generateSitemap(posts);
+  res.status(200).json(sitemap);
+}
