@@ -4,9 +4,28 @@ export default function Contact() {
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log(e);
+    const formData = new FormData(e.target);
+    const content = {};
+    formData.forEach((value, key) => {
+      content[key] = value;
+    });
+    console.log("content", content);
+    const res = await fetch("/api/contact", {
+      body: JSON.stringify(content),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+
+    const result = await res.json();
+    e.target.reset();
+    setName("");
+    setEmail("");
+    setMessage("");
+    alert(result.message);
   }
 
   return (
@@ -49,7 +68,6 @@ export default function Contact() {
           </div>
         </div>
         <form
-          netlify
           name="contact"
           onSubmit={handleSubmit}
           className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
@@ -58,7 +76,8 @@ export default function Contact() {
             Contact Me
           </h2>
           <p className="leading-relaxed mb-5">
-            Interested in collaboration on a new project? Feel free to get in touch.
+            Interested in collaboration on a new project? Feel free to get in
+            touch.
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
