@@ -1,5 +1,5 @@
 ---
-title: "PreRendering on NextJS"
+title: "Pre-Rendering on NextJS"
 author: "Ajai Chemmanam"
 date: "2022-01-02"
 ---

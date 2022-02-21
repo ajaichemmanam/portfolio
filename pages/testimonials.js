@@ -5,21 +5,21 @@ var testimonials = [
   {
     quote:
       "I had worked with Ajai during my masters as well as during my Research at Cochin University of Science and Technology. Ajai is a good mentor and a wonderful educator. He is totally dependable, self-driven enthusiastic individual. His passion for research in AI and ML is honorable. We had collaborated on certain research works in the domain of computer vision and time series analysis. His problem-solving skills are exemplary. I am pleased to recommend Ajai, for any job or research in AI/ML. He will be a valuable asset to your Team. I wish him all the best in his future endeavors.",
-    image: "/static/edwinjose.jpeg",
+    image: "/static/testimonialImages/edwinjose.jpeg",
     name: "Edwin Jose",
     company: "Research Fellow at IIT Palakkad",
   },
   {
     quote:
       "I worked with Ajai during the initial days of his career. I must say that he is a technology enthusiastic and very quick learner. Also his adaptibility with team culture is also a treat to watch. We worked together in some of our task & I closely observed how quickly he understood the customer requirements & start working on them promptly. Also he was always open to feedbacks. I wish Ajai for all his future endeavours. All the very best, Keep growing.",
-    image: "/static/soumya.jpeg",
+    image: "/static/testimonialImages/soumya.jpeg",
     name: "Soumya Kanta Dey",
     company: "Software Engineer at Cisco",
   },
   {
     quote:
       "I have worked with Ajai for two years and together we have implemented many solutions using state of the art technologies including IoT NLP ( chatbots ) and ML. Ajai is knowledgeable, driven and enthusiastic Machine Learning expert in search of excellence.",
-    image: "/static/salman.jpeg",
+    image: "/static/testimonialImages/salman.jpeg",
     name: "Salmanul Faris K",
     company: "Software Engineer at Cisco",
   },
