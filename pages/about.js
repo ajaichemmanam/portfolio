@@ -28,7 +28,7 @@ export default function About() {
             </a>
           </div>
         </div>
-        <div className="lg:max-w-[40rem] lg:w-full md:w-1/2 w-5/6">
+        <div className="lg:max-w-[40rem] lg:w-full md:block hidden">
           {/* <img
             className="object-cover object-center rounded"
             alt="hero"
