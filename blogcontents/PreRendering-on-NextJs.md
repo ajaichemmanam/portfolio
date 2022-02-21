@@ -85,7 +85,7 @@ We can’t export it from non-page files as React needs to have all the required
 
 To use Server-side Rendering, we need to export `getServerSideProps` instead of `getStaticProps` from the page.
 
-Usage:
+##### Usage:
 
 ```js
 export async function getServerSideProps(context) {
@@ -115,7 +115,7 @@ The data is frequently updated, which requires request-time data fetching.
 SWR is a React Hook useful when fetching data on the client side.
 It handles caching, revalidation, focus tracking, refetching on interval, and more.
 
-Usage:
+##### Usage:
 
 ```js
 import useSWR from "swr";
@@ -129,4 +129,4 @@ function Profile() {
 }
 ```
 
-Read More in the [official documentation](https://swr.vercel.app/)
+Read more about SWR in the [official documentation](https://swr.vercel.app/)
