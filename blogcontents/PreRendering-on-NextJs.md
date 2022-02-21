@@ -1,24 +1,30 @@
 ---
 title: "PreRendering on NextJS"
 author: "Ajai Chemmanam"
-date: "2020-01-02"
+date: "2022-01-02"
 ---
 
 Next.js pre-renders every page by default.
 Next.js generates HTML for each page in advance, instead of having it all done by client-side JavaScript.
 Pre-rendering can result in better performance and SEO.
 
-Next.js has two forms of pre-rendering: Static Generation and Server-side Rendering. The difference is in when it generates the HTML for a page.
+Next.js has two forms of pre-rendering:
 
-Static Generation is the pre-rendering method that generates the HTML at build time.
+- Static Generation
+- Server-side Rendering.
+
+The difference between the two is when it generates the HTML for a page.
+
+Static Generation is a pre-rendering method that generates the HTML at build time.
 The pre-rendered HTML is then reused on each request.
 
-Server-side Rendering is the pre-rendering method that generates the HTML on each request.
+Server-side Rendering is a pre-rendering method that generates the HTML on each request at the server side.
+So most of the heavy lifting is done at the server end and not in the client browser.
 
-In development mode, every page is pre-rendered on each request — even for pages that use Static Generation.
-
-We can choose which pre-rendering form to use for each page in the project.
+We can choose which pre-rendering to use for each page in the project.
 A "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others is also possible.
+
+Note: In development mode, every page is pre-rendered on each request — even for pages that uses Static Generation.
 
 ### How to check if PreRendering works?
 
@@ -71,3 +77,56 @@ export async function getStaticProps() {
 }
 
 ```
+
+`getStaticProps` can only be exported from a page.
+We can’t export it from non-page files as React needs to have all the required data before the page is rendered.
+
+### Server Side Rendering (SSR) with external data
+
+To use Server-side Rendering, we need to export `getServerSideProps` instead of `getStaticProps` from the page.
+
+Usage:
+
+```js
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      // props for your component
+    },
+  };
+}
+```
+
+Parameter (context) contains request specific parameters.
+Use `getServerSideProps` only if we need to pre-render a page whose data must be fetched at request time.
+Time to first byte (TTFB) will be slower than `getStaticProps` because the server must compute the result on every request, and the result cannot be cached by a CDN without extra configuration.
+
+### Hybrid Static and Client Side Rendering
+
+We can also statically generate/pre-render parts of the page that do not require external data.
+When the page loads, fetch external data from the client using JavaScript and populate the remaining parts.
+
+This approach works well for pages like admin dashboards.
+Since a dashboard is a private, user-specific page, SEO is not relevant, and the page doesn’t need to be pre-rendered.
+The data is frequently updated, which requires request-time data fetching.
+
+### SWR
+
+SWR is a React Hook useful when fetching data on the client side.
+It handles caching, revalidation, focus tracking, refetching on interval, and more.
+
+Usage:
+
+```js
+import useSWR from "swr";
+
+function Profile() {
+  const { data, error } = useSWR("/api/user", fetch);
+
+  if (error) return <div>failed to load</div>;
+  if (!data) return <div>loading...</div>;
+  return <div>hello {data.name}!</div>;
+}
+```
+
+Read More in the [official documentation](https://swr.vercel.app/)

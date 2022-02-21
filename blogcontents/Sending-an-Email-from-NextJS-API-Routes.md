@@ -13,7 +13,7 @@ After a lot of searching, I used [EmailJS](https://github.com/eleith/emailjs) to
 
 ## Setting up the Form
 
-Setup a basic form as following.
+Setup a basic form in `/pages/contact.js` as following.
 Ensure onSubmit corresponds to a function that handles the logic on what to do with the form data.
 
 ```html
@@ -122,4 +122,4 @@ As we don't publish the `.env` file, We need to add the secret keys to the Verce
 Once added, the final page will look something like this.
 ![Vercel Environment Variables](/static/blogImages/vercel_env.png)
 
-
+You can now fill out the form and an email will be sent to your email id.
