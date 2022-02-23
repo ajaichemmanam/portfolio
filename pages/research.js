@@ -1,4 +1,4 @@
-import { CodeIcon } from "@heroicons/react/solid";
+import { AcademicCapIcon } from "@heroicons/react/solid";
 import Layout from "../components/layout";
 
 var research_projects = [
@@ -10,6 +10,7 @@ var research_projects = [
       "Published in Artificial Intelligence Driven Circuits and Systems",
     image:
       "https://media.springernature.com/w306/springer-static/cover-hires/book/978-981-16-6940-8",
+    imageclass: "object-cover object-center",
     link: "https://link.springer.com/chapter/10.1007/978-981-16-6940-8_13",
   },
   {
@@ -18,6 +19,7 @@ var research_projects = [
     description:
       "Published in International Conference on Data Science and Engineering (ICDSE 2021), IIT Patna",
     image: "/static/researchImages/joint_learning.png",
+    imageclass: "object-cover object-top",
     link: "#",
   },
   {
@@ -25,6 +27,7 @@ var research_projects = [
     subtitle: "Ajai John Chemmanam, Bijoy A. Jose, Asif Moopan",
     description: "In Process of Submission",
     image: "/static/researchImages/lsh.png",
+    imageclass: "object-cover object-top",
     link: "#",
   },
   {
@@ -32,6 +35,7 @@ var research_projects = [
     subtitle: "Ajai John Chemmanam, Shahanaz N., Bijoy A. Jose",
     description: "In Process of Submission",
     image: "/static/researchImages/niqe.png",
+    imageclass: "object-cover object-top",
     link: "#",
   },
   {
@@ -42,6 +46,7 @@ var research_projects = [
     description:
       "Published in: 2019 7th International Conference on Smart Computing & Communications (ICSCC)",
     image: "/static/researchImages/Face_Tracking_Robot_IEEE.png",
+    imageclass: "object-cover object-top",
     link: "https://ieeexplore.ieee.org/abstract/document/8843628",
   },
   {
@@ -51,6 +56,7 @@ var research_projects = [
     description:
       "Published in: 2020 International Symposium on Networks, Computers and Communications (ISNCC)",
     image: "/static/researchImages/construction_safety.png",
+    imageclass: "object-cover object-top",
     link: "https://ieeexplore.ieee.org/abstract/document/9297198",
   },
   {
@@ -60,6 +66,7 @@ var research_projects = [
     description:
       "Published in: 2017 International Conference on Computer Communication and Informatics (ICCCI)",
     image: "/static/researchImages/portable_evoting.png",
+    imageclass: "object-cover object-top",
     link: "https://ieeexplore.ieee.org/abstract/document/8117785",
   },
   {
@@ -70,57 +77,66 @@ var research_projects = [
     description:
       "Published in: Journal of Information Science and Engineering, Vol. 36 No. 5, pp. 1055-1067",
     image: "/static/researchImages/jise_face_tracking.png",
+    imageclass: "object-cover object-top",
     link: "https://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=176_2358",
   },
 ];
+
+export function ResearchView() {
+  return (
+    <section
+      id="research_projects"
+      className="text-gray-400 bg-gray-900 body-font"
+    >
+      <div className="container px-5 py-10 mx-auto text-center lg:px-40">
+        <div className="flex flex-col w-full mb-20">
+          <AcademicCapIcon className="mx-auto inline-block w-20 mb-4" />
+          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
+            My Research Contributions
+          </h1>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+            Achievements: Prime Minister's Fellowship for Doctoral Research in
+            October 2020.
+          </p>
+        </div>
+        <div className="flex flex-wrap -m-4">
+          {research_projects.map((project) => (
+            <a
+              href={project.link}
+              key={project.image}
+              className="sm:w-1/2 w-100 p-4"
+            >
+              <div className="flex relative">
+                <img
+                  alt="gallery"
+                  className={
+                    "absolute inset-0 w-full h-full " + project.imageclass
+                  }
+                  src={project.image}
+                />
+                <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                  <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
+                    {project.subtitle}
+                  </h2>
+                  <h1 className="title-font text-lg font-medium text-white mb-3">
+                    {project.title}
+                  </h1>
+                  <p className="leading-relaxed">{project.description}</p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Research() {
   return (
     <div className="App">
       <Layout>
-        <section
-          id="research_projects"
-          className="text-gray-400 bg-gray-900 body-font"
-        >
-          <div className="container px-5 py-10 mx-auto text-center lg:px-40">
-            <div className="flex flex-col w-full mb-20">
-              <CodeIcon className="mx-auto inline-block w-10 mb-4" />
-              <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-                My Research Contributions
-              </h1>
-              <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                Achievements: Prime Minister's Fellowship for Doctoral Research
-                in October 2020.
-              </p>
-            </div>
-            <div className="flex flex-wrap -m-4">
-              {research_projects.map((project) => (
-                <a
-                  href={project.link}
-                  key={project.image}
-                  className="sm:w-1/2 w-100 p-4"
-                >
-                  <div className="flex relative">
-                    <img
-                      alt="gallery"
-                      className="absolute inset-0 w-full h-full object-cover object-center"
-                      src={project.image}
-                      height={120}
-                    />
-                    <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                      <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
-                        {project.subtitle}
-                      </h2>
-                      <h1 className="title-font text-lg font-medium text-white mb-3">
-                        {project.title}
-                      </h1>
-                      <p className="leading-relaxed">{project.description}</p>
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ResearchView />
       </Layout>
     </div>
   );

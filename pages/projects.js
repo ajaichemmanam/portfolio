@@ -1,4 +1,6 @@
 import { CodeIcon } from "@heroicons/react/solid";
+import Layout from "../components/layout";
+
 var projects = [
   {
     title: "Emovere - An Emotion Recognition App",
@@ -7,7 +9,7 @@ var projects = [
       "A Microsoft UWP app that uses Tensorflow and Keras to detect emotions",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/Emovere-ML/master/assets/emovere.png",
-    link: "https://github.com/ajaichemmanam/simple_bodypix_python",
+    link: "https://github.com/ajaichemmanam/",
   },
   {
     title: "React 3D Keypad/ Keyboard",
@@ -148,7 +150,7 @@ var projects = [
   },
 ];
 
-export default function Projects() {
+export function ProjectsView() {
   return (
     <section id="projects" className="text-gray-400 bg-gray-900 body-font">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
@@ -191,5 +193,14 @@ export default function Projects() {
         </div>
       </div>
     </section>
+  );
+}
+export default function Projects() {
+  return (
+    <div className="App">
+      <Layout>
+        <ProjectsView />
+      </Layout>
+    </div>
   );
 }
