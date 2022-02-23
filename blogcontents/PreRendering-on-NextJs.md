@@ -56,8 +56,8 @@ Another way is to completely skip pre-rendering and use client-side JavaScript t
 Pages that do not require fetching external data, will automatically be statically generated when the app is built for production.
 But in some pages, the content is taken by accessing the file system, fetching from external API, or querying a database at build time.
 
-In Next.js, when exporting a page component, we can also export an async function called `getStaticProps`.
-`getStaticProps` runs at build time in production.
+In Next.js, when exporting a page component, we can also export an async function called **getStaticProps**.
+**getStaticProps** runs at build time in production.
 Inside the function, we can fetch external data and send it as props to the page.
 
 ##### Usage:
@@ -78,12 +78,12 @@ export async function getStaticProps() {
 
 ```
 
-`getStaticProps` can only be exported from a page.
+**getStaticProps** can only be exported from a page.
 We can’t export it from non-page files as React needs to have all the required data before the page is rendered.
 
 ### Server Side Rendering (SSR) with external data
 
-To use Server-side Rendering, we need to export `getServerSideProps` instead of `getStaticProps` from the page.
+To use Server-side Rendering, we need to export **getServerSideProps** instead of **getStaticProps** from the page.
 
 ##### Usage:
 
@@ -98,8 +98,8 @@ export async function getServerSideProps(context) {
 ```
 
 Parameter (context) contains request specific parameters.
-Use `getServerSideProps` only if we need to pre-render a page whose data must be fetched at request time.
-Time to first byte (TTFB) will be slower than `getStaticProps` because the server must compute the result on every request, and the result cannot be cached by a CDN without extra configuration.
+Use **getServerSideProps** only if we need to pre-render a page whose data must be fetched at request time.
+Time to first byte (TTFB) will be slower than **getStaticProps** because the server must compute the result on every request, and the result cannot be cached by a CDN without extra configuration.
 
 ### Hybrid Static and Client Side Rendering
 

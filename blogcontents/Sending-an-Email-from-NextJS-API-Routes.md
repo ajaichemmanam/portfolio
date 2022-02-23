@@ -13,7 +13,7 @@ After a lot of searching, I used [EmailJS](https://github.com/eleith/emailjs) to
 
 ## Setting up the Form
 
-Setup a basic form in `/pages/contact.js` as following.
+Setup a basic form in **/pages/contact.js** as following.
 Ensure onSubmit corresponds to a function that handles the logic on what to do with the form data.
 
 ```html
@@ -36,7 +36,7 @@ You can add them as necessary.
 
 ### Handle Submit through API
 
-On clicking the submit button in the form, the function referenced in `onSubmit` of the form is called.
+On clicking the submit button in the form, the function referenced in **onSubmit** of the form is called.
 Logic on what to do with the form data is defined here.
 
 ```js
@@ -65,9 +65,12 @@ async function handleSubmit(e) {
 
 ### API Endpoint
 
-Install the emailjs library : `npm install emailjs`
+Install the emailjs library : 
+```bash
+npm install emailjs
+```
 
-The content in `/api/contact.js` is as follows.
+The content in **/api/contact.js** is as follows.
 
 ```js
 import { SMTPClient } from "emailjs";
@@ -99,8 +102,8 @@ export default async function handler(req, res) {
 }
 ```
 
-NextJS will create an endpoint at `/api/contact`.
-The secrets are stored in an `.env` file at the root of the directory.
+NextJS will create an endpoint at **/api/contact**.
+The secrets are stored in an **.env** file at the root of the directory.
 
 ```bash
 FROM_EMAIL_USERNAME="Email Address from which the email has to be sent"
@@ -109,11 +112,11 @@ FROM_EMAIL_HOST="smtp.gmail.com" # for Gmail
 TO_EMAIL_USERNAME="Email Address to which the email has to be sent"
 ```
 
-Make sure the `.env` file is not shared publicly (Add to .gitignore).
+Make sure the **.env** file is not shared publicly (Add to .gitignore).
 
 ### Deploying on Vercel
 
-As we don't publish the `.env` file, We need to add the secret keys to the Vercel Deployment environment.
+As we don't publish the **.env** file, We need to add the secret keys to the Vercel Deployment environment.
 
 - Login to the Vercel Deployment Page.
 - Go to Settings and Select Environment Variables.

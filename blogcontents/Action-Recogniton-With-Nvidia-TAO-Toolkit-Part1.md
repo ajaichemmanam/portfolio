@@ -27,7 +27,7 @@ Official Site: [Nvidia TAO Toolkit](https://developer.nvidia.com/tao-toolkit)
 
 We will use jupyter notebook for running the code shown in this tutorial.
 
-Create a folder named `workspace`. We will use this as the root of our project
+Create a folder named **workspace**. We will use this as the root of our project
 
 ```bash
 %env HOST_DATA_DIR=/home/user/AJC/workspace/action_recognition_net/data # Absolute path to directory to store the training data
@@ -45,7 +45,7 @@ Let's create the sub directories
 !mkdir -p $HOST_RESULTS_DIR
 ```
 
-Create a `tao_mounts.json` file which mounts the specified directories in TAO docker with the command `!cat ~/.tao_mounts.json`.
+Create a **tao_mounts.json** file which mounts the specified directories in TAO docker
 
 ```python
 import json
@@ -83,6 +83,12 @@ with open(mounts_file, "w") as mfile:
     json.dump(tlt_configs, mfile, indent=4)
 ```
 
+
+```bash
+!cat ~/.tao_mounts.json
+```
+
+
 ### Installing Pre-Requisities
 
 The basic requirements required for this tutorial is as following
@@ -95,10 +101,14 @@ The basic requirements required for this tutorial is as following
 - nvidia-docker2 > 2.5.0-1
 - nvidia-driver > 455+
 
-Once you have installed the pre-requisites, please log in to the docker registry nvcr.io by running `docker login nvcr.io`.
+Once you have installed the pre-requisites, please log in to the docker registry nvcr.io
+
+```bash
+docker login nvcr.io
+```
 
 You will be asked to enter a username and password.
-The username is `$oauthtoken` and the password is the API key generated from ngc.nvidia.com.
+The username is **$oauthtoken** and the password is the API key generated from ngc.nvidia.com.
 Please follow the instructions in the [NGC setup guide](https://docs.nvidia.com/ngc/ngc-overview/index.html#generating-api-key) to generate your own API key.
 
 Now install the other required libraries.
@@ -111,7 +121,13 @@ Now install the other required libraries.
 !pip3 install xmltodict opencv-python # Required for dataprocessing
 ```
 
-If you have setup everything correctly, running `!tao info` will show like this
+To verif the setup, run
+
+```bash
+!tao info
+```
+
+The result will be like this
 
 ```
 Configuration of the TAO Toolkit Instance
@@ -131,7 +147,7 @@ We are using HMDB51 Dataset to finetune the action recognition model.
 !mkdir -p $HOST_DATA_DIR/raw_data #Directory to copy the data to
 ```
 
-Extract the required classes into `$HOST_DATA_DIR/raw_data` folder.
+Extract the required classes into **$HOST_DATA_DIR/raw_data** folder.
 
 ```bash
 !unrar x $HOST_DATA_DIR/videos/fall_floor.rar $HOST_DATA_DIR/raw_data
@@ -181,7 +197,13 @@ import os
 os.environ["PATH"]="{}/ngccli:{}".format(os.getenv("HOST_RESULTS_DIR", ""), os.getenv("PATH", ""))
 ```
 
-Find the Action Recognition Model on Nvidia NGC `!ngc registry model list nvidia/tao/actionrecognitionnet:*`, You will get someting like this
+Find the Action Recognition Model on Nvidia NGC
+
+```bash
+!ngc registry model list nvidia/tao/actionrecognitionnet:*
+```
+
+The output will be like this
 
 ```
 +-------+-------+-------+-------+-------+-------+-------+-------+-------+
@@ -207,7 +229,7 @@ Download the Pre-trained Model
 !ngc registry model download-version "nvidia/tao/actionrecognitionnet:trainable_v1.0" --dest $HOST_RESULTS_DIR/pretrained
 ```
 
-Add the configuration file to `$HOST_SPECS_DIR` with the filename `train_rgb_3d_finetune.yaml`
+Add the configuration file to **$HOST_SPECS_DIR** with the filename **train_rgb_3d_finetune.yaml**
 
 ```yaml
 output_dir: /results/rgb_3d_ptm
@@ -301,7 +323,7 @@ Rename the last checkpoint saved
 
 ### Evaluation, Inference and Exporting
 
-We need to create a spec file in `$HOST_SPECS_DIR` folder for each of the three tasks Evaluation, Inference and Exporting.
+We need to create a spec file in **$HOST_SPECS_DIR** folder for each of the three tasks Evaluation, Inference and Exporting.
 The files contain the following content
 
 ```yaml
@@ -329,7 +351,7 @@ dataset_config:
     val_center_crop: False
 ```
 
-Save the file as `evaluate_rgb.yaml`, `infer_rgb.yaml` and `export_rgb.yaml` respectively.
+Save the file as **evaluate_rgb.yaml**, **infer_rgb.yaml** and **export_rgb.yaml** respectively.
 
 #### Evaluating the finetuned model
 
