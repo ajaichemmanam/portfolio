@@ -25,6 +25,10 @@ ${[...posts]
   <loc>${BASE_URL}/projects</loc>
   <priority>0.64</priority>
 </url>
+<url>
+  <loc>${BASE_URL}/research</loc>
+  <priority>0.64</priority>
+</url>
 </urlset>`.replace(",", "");
   // writes sitemap.xml to public directory
   const path = `${process.cwd()}/public/sitemap.xml`;
