@@ -55,7 +55,7 @@ export default function Blogs({ allPostsData }) {
           </div>
         </Link>
       </div>
-      <div className="h-screen">
+      <div className="h-full">
         <section className="max-w-5xl mx-auto px-4 pb-28 sm:px-6 md:px-8 xl:px-12 xl:max-w-6xl">
           <h2 className="mb-4 p-4 text-3xl text-center sm:text-4xl tracking-tight text-slate-900 font-extrabold dark:text-slate-200">
             All Blogs
