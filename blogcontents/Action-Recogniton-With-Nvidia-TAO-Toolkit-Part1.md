@@ -9,7 +9,7 @@ date: "2022-02-23"
 Nvidia Train Adapt Optimize (TAO) Toolkit is a Python based AI toolkit for development of purpose-built AI models and customizing them with users' own data.
 ![TAO](https://developer.nvidia.com/sites/default/files/akamai/NGC-TAO-Web-Page-Updates-DZ-GTC21-1963548-pretrained-models-r4.png)
 
-The overall architecture consists of two parts Nvidia-TAO (Frontend) and Nvidia Tao Toolkit (Backend)
+The overall architecture consists of two parts Nvidia-TAO (Frontend) and Nvidia Tao Toolkit (Backend).
 ![TAO](https://developer.nvidia.com/sites/default/files/akamai/tlt-tao-toolkit-bring-your-own-model-diagram.svg)
 
 ### TAO
@@ -83,11 +83,9 @@ with open(mounts_file, "w") as mfile:
     json.dump(tlt_configs, mfile, indent=4)
 ```
 
-
 ```bash
 !cat ~/.tao_mounts.json
 ```
-
 
 ### Installing Pre-Requisities
 
@@ -413,7 +411,13 @@ The output will be like this
 
 ### Exporting the Model
 
-Create an export directory `!mkdir -p $HOST_RESULTS_DIR/export` and run the following to start exporting
+Create an export directory
+
+```bash
+!mkdir -p $HOST_RESULTS_DIR/export
+```
+
+Run the following to start exporting
 
 ```bash
 # Export the RGB model to encrypted ONNX model

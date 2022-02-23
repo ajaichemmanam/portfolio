@@ -13,6 +13,34 @@ export async function getStaticProps() {
     },
   };
 }
+
+const formatContent = (content) => {
+  // Remove markdown headings from content using regex
+  const regex = /^#+\s+(.*)/gm;
+  content = content.replace(regex, "");
+
+  // remove markdown images from content using regex
+  const regex2 = /!\[.*\]\((.*)\)/gm;
+  content = content.replace(regex2, "");
+
+  // replace markdown links with text in content
+  const regex3 = /\[(.*?)\]\((.*?)\)/g;
+  content = content.replace(regex3, "$1");
+
+  // // remove markdown code blocks from content using regex
+  const regex4 = /```(.*?)```/gm;
+  content = content.replace(regex4, "");
+
+  // remove markdown italics with text in content
+  const regex5 = /\*\*(.*?)\*\*/gm;
+  content = content.replace(regex5, "$1");
+
+  // remove markdown bold with text in content
+  const regex6 = /\*(.*?)\*/gm;
+  content = content.replace(regex6, "$1");
+
+  return content;
+};
 export default function Blogs({ allPostsData }) {
   const [currentPage, setCurrentPage] = React.useState(1);
   const [numpostperpage, setNumpostperpage] = React.useState(2);
@@ -76,7 +104,7 @@ export default function Blogs({ allPostsData }) {
                   Written by {author}
                 </div>
                 <div className="mb-6 prose prose-slate dark:prose-dark text-left line-clamp-3">
-                  {content}
+                  {formatContent(content)}
                 </div>
                 <div className="mt-auto">
                   <div className="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500">

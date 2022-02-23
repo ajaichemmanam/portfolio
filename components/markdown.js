@@ -23,7 +23,7 @@ export default function MarkDownFormatter({ markdown }) {
             ) : (
               <div
                 className="overflow-auto p-2 m-2"
-                style={{ color: "#63666a" }}
+                style={{ color: "rgb(150 160 175)" }}
               >
                 <code className={className} {...props}>
                   {children}
