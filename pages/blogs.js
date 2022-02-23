@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PencilAltIcon } from "@heroicons/react/solid";
 import { getSortedPostsData } from "../lib/posts";
 import utilStyles from "../styles/utils.module.css";
+import React from "react";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -13,6 +14,37 @@ export async function getStaticProps() {
   };
 }
 export default function Blogs({ allPostsData }) {
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const [numpostperpage, setNumpostperpage] = React.useState(2);
+  const [totalPages, setTotalPages] = React.useState(
+    Math.floor(allPostsData.length / numpostperpage) + 1
+  );
+
+  let pageArray = new Array();
+  for (var i = 1; i <= totalPages; i++) pageArray.push(i);
+
+  const currentPosts = allPostsData.slice(
+    (currentPage - 1) * numpostperpage,
+    (currentPage - 1) * numpostperpage + numpostperpage
+  );
+
+  const pages = pageArray.map((idx) => (
+    <a
+      href="#"
+      key={idx}
+      onClick={() => setCurrentPage(idx)}
+      className={idx == currentPage ? "text-green" : ""}
+    >
+      <div
+        className={
+          idx == currentPage ? "p-2 text-green-400" : "p-2 text-white "
+        }
+      >
+        {idx}
+      </div>
+    </a>
+  ));
+
   return (
     <Layout>
       <div className="w-52 cursor-pointer items-center rounded-full text-sm font-semibold whitespace-nowrap px-6 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500">
@@ -29,7 +61,7 @@ export default function Blogs({ allPostsData }) {
             All Blogs
           </h2>
           <ul className="space-y-16">
-            {allPostsData.map(({ id, date, author, title, content }) => (
+            {currentPosts.map(({ id, date, author, title, content }) => (
               <div
                 className="relative flex flex-col max-w-3xl lg:ml-auto xl:max-w-none xl:w-[50rem]"
                 key={id}
@@ -55,6 +87,26 @@ export default function Blogs({ allPostsData }) {
                 </div>
               </div>
             ))}
+            <div className="pagination">
+              <div className="flex justify-end">
+                <div className="p-2 text-white">Pages:</div>
+                {currentPage != 1 ? (
+                  <a href="#" onClick={() => setCurrentPage(currentPage - 1)}>
+                    <div className="p-2 text-white">&#8592; Prev</div>
+                  </a>
+                ) : (
+                  <span> </span>
+                )}
+                {pages}
+                {currentPage != totalPages ? (
+                  <a href="#" onClick={() => setCurrentPage(currentPage + 1)}>
+                    <div className="p-2 text-white">&#8594; Next</div>
+                  </a>
+                ) : (
+                  <span> </span>
+                )}
+              </div>
+            </div>
           </ul>
         </section>
       </div>
