@@ -21,7 +21,7 @@ export default function MarkDownFormatter({ markdown }) {
                 {...props}
               />
             ) : (
-              <div className="overflow-auto">
+              <div className="overflow-auto p-2 m-2">
                 <code className={className} {...props}>
                   {children}
                 </code>
