@@ -9,6 +9,10 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.ajaichemmanam.vercel.app/blogposts/Action-Recogniton-With-Nvidia-TAO-Toolkit-Part1</loc>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.ajaichemmanam.vercel.app/blogposts/PreRendering-on-NextJs</loc>
   <priority>0.80</priority>
 </url>
