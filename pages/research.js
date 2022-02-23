@@ -1,0 +1,127 @@
+import { CodeIcon } from "@heroicons/react/solid";
+import Layout from "../components/layout";
+
+var research_projects = [
+  {
+    title:
+      "Detecting Anomalies in Power Consumption of an Internet of Things Network Using Statistical Techniques",
+    subtitle: "Edwin Jose, Ajai John Chemmanam, Bijoy A. Jose, Asif Mooppan",
+    description:
+      "Published in Artificial Intelligence Driven Circuits and Systems",
+    image:
+      "https://media.springernature.com/w306/springer-static/cover-hires/book/978-981-16-6940-8",
+    link: "https://link.springer.com/chapter/10.1007/978-981-16-6940-8_13",
+  },
+  {
+    title: "Joint Learning for Multi Tasking Models",
+    subtitle: "Ajai John Chemmanam, Bijoy A. Jose",
+    description:
+      "Published in International Conference on Data Science and Engineering (ICDSE 2021), IIT Patna",
+    image: "/static/researchImages/joint_learning.png",
+    link: "#",
+  },
+  {
+    title: "Improved multi object tracking with Locality Sensitive Hashing",
+    subtitle: "Ajai John Chemmanam, Bijoy A. Jose, Asif Moopan",
+    description: "In Process of Submission",
+    image: "/static/researchImages/lsh.png",
+    link: "#",
+  },
+  {
+    title: "Fused Features for No Reference Image Quality Assessment",
+    subtitle: "Ajai John Chemmanam, Shahanaz N., Bijoy A. Jose",
+    description: "In Process of Submission",
+    image: "/static/researchImages/niqe.png",
+    link: "#",
+  },
+  {
+    title:
+      "Face Tracking Robot testbed for Performance Assessment of Machine Learning Techniques",
+    subtitle:
+      "P.B. Nithin, Albert Francis, Ajai John Chemmanam, Bijoy A. Jose, Jimson Mathew",
+    description:
+      "Published in: 2019 7th International Conference on Smart Computing & Communications (ICSCC)",
+    image: "/static/researchImages/Face_Tracking_Robot_IEEE.png",
+    link: "https://ieeexplore.ieee.org/abstract/document/8843628",
+  },
+  {
+    title: "Construction Safety Surveillance Using Machine Learning",
+    subtitle:
+      "Ruksin Kamal, Ajai John Chemmanam, Bijoy A. Jose, Sunil Mathews, Eldho Varghese",
+    description:
+      "Published in: 2020 International Symposium on Networks, Computers and Communications (ISNCC)",
+    image: "/static/researchImages/construction_safety.png",
+    link: "https://ieeexplore.ieee.org/abstract/document/9297198",
+  },
+  {
+    title: "Portable E-voting decision system",
+    subtitle:
+      "Ajai J. Chemmanam, S. Sreelekshmi, K. Salmanul Faris, M. Vasu Sairam, Bijoy A. Jose",
+    description:
+      "Published in: 2017 International Conference on Computer Communication and Informatics (ICCCI)",
+    image: "/static/researchImages/portable_evoting.png",
+    link: "https://ieeexplore.ieee.org/abstract/document/8117785",
+  },
+  {
+    title:
+      "Interactive Robotic Testbed for Performance Assessment of Machine Learning based Computer Vision Techniques",
+    subtitle:
+      "NITHIN P. B., ALBERT FRANCIS R., AJAI JOHN CHEMMANAM, BIJOY A. JOSE AND JIMSON MATHEW",
+    description:
+      "Published in: Journal of Information Science and Engineering, Vol. 36 No. 5, pp. 1055-1067",
+    image: "/static/researchImages/jise_face_tracking.png",
+    link: "https://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=176_2358",
+  },
+];
+export default function Research() {
+  return (
+    <div className="App">
+      <Layout>
+        <section
+          id="research_projects"
+          className="text-gray-400 bg-gray-900 body-font"
+        >
+          <div className="container px-5 py-10 mx-auto text-center lg:px-40">
+            <div className="flex flex-col w-full mb-20">
+              <CodeIcon className="mx-auto inline-block w-10 mb-4" />
+              <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
+                My Research Contributions
+              </h1>
+              <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+                Achievements: Prime Minister's Fellowship for Doctoral Research
+                in October 2020.
+              </p>
+            </div>
+            <div className="flex flex-wrap -m-4">
+              {research_projects.map((project) => (
+                <a
+                  href={project.link}
+                  key={project.image}
+                  className="sm:w-1/2 w-100 p-4"
+                >
+                  <div className="flex relative">
+                    <img
+                      alt="gallery"
+                      className="absolute inset-0 w-full h-full object-cover object-center"
+                      src={project.image}
+                      height={120}
+                    />
+                    <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                      <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
+                        {project.subtitle}
+                      </h2>
+                      <h1 className="title-font text-lg font-medium text-white mb-3">
+                        {project.title}
+                      </h1>
+                      <p className="leading-relaxed">{project.description}</p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      </Layout>
+    </div>
+  );
+}

@@ -1,5 +1,5 @@
 ---
-title: "Action Recogniton With Nvidia TAO Toolkit - Part1"
+title: "Action Recogniton With Nvidia TAO Toolkit - Part 1"
 author: "Ajai Chemmanam"
 date: "2022-02-23"
 ---

@@ -25,6 +25,11 @@ const Navbar = () => {
               <a className="text-white"> Projects</a>
             </Link>
           </div>
+          <div className="mr-5">
+            <Link href="/research">
+              <a className="text-white"> Research</a>
+            </Link>
+          </div>
         </nav>
       </div>
     </header>
