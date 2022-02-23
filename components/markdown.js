@@ -21,9 +21,11 @@ export default function MarkDownFormatter({ markdown }) {
                 {...props}
               />
             ) : (
-              <code className={className} {...props}>
-                {children}
-              </code>
+              <div className="overflow-auto">
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              </div>
             );
           },
         }}
