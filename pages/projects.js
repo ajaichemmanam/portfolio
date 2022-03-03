@@ -154,16 +154,17 @@ export function ProjectsView() {
   return (
     <section id="projects" className="text-gray-400 bg-gray-900 body-font">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
-        <div className="flex flex-col w-full mb-20">
-          <CodeIcon className="mx-auto inline-block w-10 mb-4" />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
+        <div className="flex flex-row w-full justify-center">
+          <CodeIcon className="inline-block w-10 mb-4" />
+          <h1 className="sm:text-4xl text-3xl font-medium title-font ml-4 mb-4 text-white">
             Apps I've Built
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            A short glimpse of my past works. Source code for some of the
-            projects are private (NDA Agreement/Client policy).
-          </p>
         </div>
+        <p className="lg:w-2/3 mx-auto mb-20 leading-relaxed text-base">
+          A short glimpse of my past works. 
+          {/* Source code for some of the projects
+          are private (NDA Agreement/Client policy). */}
+        </p>
         <div className="flex flex-wrap -m-4">
           {projects.map((project) => (
             <a
