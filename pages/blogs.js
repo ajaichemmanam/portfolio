@@ -75,7 +75,7 @@ export default function Blogs({ allPostsData }) {
 
   return (
     <Layout>
-      <div className="w-52 cursor-pointer items-center rounded-full text-sm font-semibold whitespace-nowrap px-6 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500">
+      <div className="w-52 cursor-pointer items-center rounded-full text-sm font-semibold whitespace-nowrap px-6 focus:outline-none focus:ring-2 bg-slate-700 text-slate-100 hover:bg-slate-600 hover:text-white focus:ring-slate-500">
         <Link href="/createblog">
           <div className="flex basis-1/4 flex-row-reverse p-2">
             <PencilAltIcon className="w-6 h-6 ml-2" />
@@ -85,7 +85,7 @@ export default function Blogs({ allPostsData }) {
       </div>
       <div className="h-full">
         <section className="max-w-5xl mx-auto px-4 pb-28 sm:px-6 md:px-8 xl:px-12 xl:max-w-6xl">
-          <h2 className="mb-4 p-4 text-3xl text-center sm:text-4xl tracking-tight text-slate-900 font-extrabold dark:text-slate-200">
+          <h2 className="mb-4 p-4 text-3xl text-center sm:text-4xl tracking-tight text-slate-200 font-extrabold">
             All Blogs
           </h2>
           <ul className="space-y-16">
@@ -94,21 +94,21 @@ export default function Blogs({ allPostsData }) {
                 className="relative flex flex-col max-w-3xl lg:ml-auto xl:max-w-none xl:w-[50rem]"
                 key={id}
               >
-                <div className="mb-4 text-xl text-slate-900 tracking-tight font-bold dark:text-slate-200">
+                <div className="mb-4 text-xl text-slate-200 tracking-tight font-bold">
                   {title}
                 </div>
-                <div className="text-sm leading-6 dark:text-slate-400 lg:absolute lg:top-0 lg:right-full lg:mr-8 lg:whitespace-nowrap">
+                <div className="text-sm leading-6 text-slate-400 lg:absolute lg:top-0 lg:right-full lg:mr-8 lg:whitespace-nowrap">
                   {date}
                 </div>
-                <div className="text-sm leading-6 dark:text-slate-400 lg:absolute lg:top-10 lg:right-full lg:mr-8 lg:whitespace-nowrap">
+                <div className="text-sm leading-6 text-slate-400 lg:absolute lg:top-10 lg:right-full lg:mr-8 lg:whitespace-nowrap">
                   Written by {author}
                 </div>
-                <div className="mb-6 prose prose-slate dark:prose-dark text-left line-clamp-3">
+                <div className="mb-6 prose prose-dark text-left line-clamp-3">
                   {formatContent(content)}
                 </div>
                 <div className="mt-auto">
                   <Link href={`/blogposts/${id}`}>
-                    <a className="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500">
+                    <a className="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-700 text-slate-100 hover:bg-slate-600 hover:text-white focus:ring-slate-500">
                       Read More
                     </a>
                   </Link>
