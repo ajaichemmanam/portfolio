@@ -19,6 +19,14 @@
 <url>
   <loc>https://www.ajaichemmanam.vercel.app/blogposts/Sending-an-Email-from-NextJS-API-Routes</loc>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.ajaichemmanam.vercel.app/blogposts/Solve-Address-Already-In-Use</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.ajaichemmanam.vercel.app/blogposts/Understanding-Bias-And-Variance-in-ML</loc>
+  <priority>0.80</priority>
 </url>  
 <url>
   <loc>https://www.ajaichemmanam.vercel.app/projects</loc>
