@@ -39,7 +39,16 @@ export default function BlogPost({ postData }) {
           <div className="absolute top-0 inset-x-0 text-slate-700 sm:text-center dark:text-slate-400">
             Date: {postData.date}
           </div>
-          <div className="text-sm leading-6 mb-16 xl:mb-0">
+          <div className="text-sm leading-6 mb-16 mx-auto xl:mb-0">
+            <img
+              src={
+                postData.authorimg
+                  ? postData.authorimg
+                  : "/static/testimonialImages/ajai.jpeg"
+              }
+              class="rounded-full w-32 mb-4 mx-auto xl:block hidden "
+              alt="Author"
+            />
             Written by {postData.author}
           </div>
           <div className="prose prose-slate dark:prose-dark">
