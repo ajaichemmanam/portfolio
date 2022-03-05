@@ -16,8 +16,13 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="mr-5">
+            <Link href="/portfolio">
+              <a className="text-white">Portfolio</a>
+            </Link>
+          </div>
+          <div className="mr-5">
             <Link href="/blogs">
-              <a className="text-white">My Blogs</a>
+              <a className="text-white">Blogs</a>
             </Link>
           </div>
           <div className="mr-5">
