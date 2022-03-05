@@ -10,6 +10,10 @@ export const generateSitemap = async (posts) => {
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>${BASE_URL}/portfolio</loc>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>${BASE_URL}/blogs</loc>
   <priority>0.80</priority>
 </url>

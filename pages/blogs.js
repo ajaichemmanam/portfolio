@@ -75,7 +75,7 @@ export default function Blogs({ allPostsData }) {
 
   return (
     <Layout>
-      <div className="w-52 cursor-pointer items-center rounded-full text-sm font-semibold whitespace-nowrap px-6 focus:outline-none focus:ring-2 bg-slate-700 text-slate-100 hover:bg-slate-600 hover:text-white focus:ring-slate-500">
+      <div className="w-52 cursor-pointer items-center rounded-full text-sm font-semibold whitespace-nowrap px-6 focus:outline-none focus:ring-2 bg-slate-700 text-slate-100 hover:bg-slate-600 hover:text-white focus:ring-slate-500 md:block hidden">
         <Link href="/createblog">
           <div className="flex basis-1/4 flex-row-reverse p-2">
             <PencilAltIcon className="w-6 h-6 ml-2" />
