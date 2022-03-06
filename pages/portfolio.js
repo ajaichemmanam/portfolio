@@ -162,6 +162,91 @@ export function PortfolioView() {
                   id="job-title"
                   className="text-lg font-semibold text-white leading-snugish"
                 >
+                  PM Research Fellow
+                  <span
+                    id="company-name"
+                    className="pl-4 text-white font-semibold"
+                  >
+                    @ Department of Electronics, CUSAT
+                  </span>
+                </h3>
+                <p
+                  id="work-date-location"
+                  className="leading-normal text-sm text-white mt-1"
+                >
+                  October 2020 – Present // Kochi, India
+                </p>
+              </header>
+              <ul id="work-description-bullets" className="">
+                <li className="mt-2.1 ml-1.5 text-sm leading-normal">
+                  <span className="-ml-2 select-none">›</span>
+                  Contributions in real time image and video analytics domain.
+                </li>
+                <li className="mt-2.1 ml-1.5 text-sm leading-normal">
+                  <span className="-ml-2 select-none">›</span>
+                  Developed novel methods for automated no reference image
+                  quality estimation for video processing pipelines.
+                </li>
+                <li className="mt-2.1 ml-1.5 text-sm leading-normal">
+                  <span className="-ml-2 select-none">›</span>
+                  Explored multi tasking architectures to perform object
+                  detection, keypoint estimation and instance segmentation using
+                  a single model.
+                </li>
+                <li className="mt-2.1 ml-1.5 text-sm leading-normal">
+                  <span className="-ml-2 select-none">›</span>
+                  Improved multi object tracking algorithms with Locality
+                  Sensitive Hashing (LSH)
+                </li>
+              </ul>
+            </section>
+            <section className="mb-5">
+              <header>
+                <h3
+                  id="job-title"
+                  className="text-lg font-semibold text-white leading-snugish"
+                >
+                  Junior Research Fellow
+                  <span
+                    id="company-name"
+                    className="pl-4 text-white font-semibold"
+                  >
+                    @ Department of Electronics, CUSAT
+                  </span>
+                </h3>
+                <p
+                  id="work-date-location"
+                  className="leading-normal text-sm text-white mt-1"
+                >
+                  May 2019 – September 2020 // Kochi, India
+                </p>
+              </header>
+              <ul id="work-description-bullets" className="">
+                <li className="mt-2.1 ml-1.5 text-sm leading-normal">
+                  <span className="-ml-2 select-none">›</span>
+                  Contributions in real time image domain.
+                </li>
+                <li className="mt-2.1 ml-1.5 text-sm leading-normal">
+                  <span className="-ml-2 select-none">›</span>
+                  Mentored development of face tracking robots
+                </li>
+                <li className="mt-2.1 ml-1.5 text-sm leading-normal">
+                  <span className="-ml-2 select-none">›</span>
+                  Mentored development of models for detecting safety helmets
+                  and vest in construction domain.
+                </li>
+                <li className="mt-2.1 ml-1.5 text-sm leading-normal">
+                  <span className="-ml-2 select-none">›</span>
+                  Mentored development of models for super resolution of images.
+                </li>
+              </ul>
+            </section>
+            <section className="mb-5">
+              <header>
+                <h3
+                  id="job-title"
+                  className="text-lg font-semibold text-white leading-snugish"
+                >
                   Senior Research Assistant
                   <span
                     id="company-name"
@@ -206,7 +291,7 @@ export function PortfolioView() {
                   id="job-title"
                   className="text-lg font-semibold text-white leading-snugish"
                 >
-                  Consultant
+                  Associate Consultant
                   <span
                     id="company-name"
                     className="pl-4 text-white font-semibold"
@@ -326,7 +411,7 @@ export function PortfolioView() {
             <section className="mb-1.5" id="exams">
               <header>
                 <h3 className="text-lg font-semibold text-white leading-snugish">
-                  Qualifications
+                  Exams
                 </h3>
               </header>
               <div className="my-2.5 last:pb-1.5">
@@ -367,13 +452,100 @@ export function PortfolioView() {
                     JavaScript
                   </li>
                   <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
-                    GraphQL - Hasura
+                    C#
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    GraphQL
                   </li>
                   <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
                     SQL
                   </li>
                   <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
                     HTML and CSS
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section className="mb-1.5" id="cloud">
+              <header>
+                <h3 className="text-lg font-semibold text-white leading-snugish">
+                  Cloud
+                </h3>
+              </header>
+              <div className="my-2.5 last:pb-1.5">
+                <ul className="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-2">
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Microsoft Azure
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Amazon AWS
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Heroku
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Google Cloud
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section className="mb-1.5" id="frameworks">
+              <header>
+                <h3 className="text-lg font-semibold text-white leading-snugish">
+                  AI Frameworks
+                </h3>
+              </header>
+              <div className="my-2.5 last:pb-1.5">
+                <ul className="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-2">
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Tensorflow v1
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Tensorflow v2
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Pytorch
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Pytorch Lightning
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Openvino
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Onnx
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Nvidia TensorRT
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Nvidia Triton Server
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section className="mb-1.5" id="front-end">
+              <header>
+                <h3 className="text-lg font-semibold text-white leading-snugish">
+                  Front End Development
+                </h3>
+              </header>
+              <div className="my-2.5 last:pb-1.5">
+                <ul className="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-2">
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    ReactJS
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    NextJS
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Streamlit
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Plotly
+                  </li>
+                  <li className="px-2.5 mr-1.6 mb-2 text-xs print:bg-white print:border-inset">
+                    Dash
                   </li>
                 </ul>
               </div>
