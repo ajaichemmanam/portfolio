@@ -1,6 +1,6 @@
 import { AcademicCapIcon } from "@heroicons/react/solid";
 import Layout from "../components/layout";
-
+import Head from "next/head";
 var research_projects = [
   {
     title:
@@ -136,6 +136,23 @@ export default function Research() {
   return (
     <div className="App">
       <Layout>
+        <Head>
+          <title>Research - Ajai Chemmanam</title>
+          <meta
+            name="description"
+            content={`Discusses research findings published by Ajai Chemmanam`}
+          />
+          <meta property="og:title" content={`Research - Ajai Chemmanam`} />
+          <meta
+            property="og:description"
+            content={`Learn more about research contributions by Ajai Chemmanam`}
+          />
+          <meta
+            property="og:url"
+            content={`https://ajaichemmanam.vercel.app/research`}
+          />
+          <meta property="og:type" content="website" />
+        </Head>
         <ResearchView />
       </Layout>
     </div>

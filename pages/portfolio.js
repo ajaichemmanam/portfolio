@@ -1,5 +1,6 @@
 import { BookOpenIcon } from "@heroicons/react/solid";
 import Layout from "../components/layout";
+import Head from "next/head";
 
 export function PortfolioView() {
   return (
@@ -16,6 +17,21 @@ export function PortfolioView() {
       md:p-16
         "
     >
+      <Head>
+        <title>Ajai Chemmanam - Portfolio</title>
+        <meta name="description" content={`Portfolio of Ajai Chemmanam`} />
+        <meta property="og:title" content={`Ajai Chemmanam - Portfolio`} />
+        <meta
+          property="og:description"
+          content={`Portfolio of Ajai Chemmanam`}
+        />
+        <meta
+          property="og:url"
+          content={`https://ajaichemmanam.vercel.app/portfolio`}
+        />
+        <meta property="og:type" content="website" />
+      </Head>
+
       <header
         className="
             flex

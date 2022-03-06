@@ -4,6 +4,7 @@ import { PencilAltIcon } from "@heroicons/react/solid";
 import { getSortedPostsData } from "../lib/posts";
 import utilStyles from "../styles/utils.module.css";
 import React from "react";
+import Head from "next/head";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -75,6 +76,21 @@ export default function Blogs({ allPostsData }) {
 
   return (
     <Layout>
+      <Head>
+        <title>Blogs - Ajai Chemmanam</title>
+        <meta name="description" content={`Blogs written by Ajai Chemmanam`} />
+        <meta property="og:title" content={`Blogs - Ajai Chemmanam`} />
+        <meta
+          property="og:description"
+          content={`Blogs written by Ajai Chemmanam`}
+        />
+        <meta
+          property="og:url"
+          content={`https://ajaichemmanam.vercel.app/blogs`}
+        />
+        <meta property="og:type" content="website" />
+      </Head>
+
       <div className="w-52 cursor-pointer items-center rounded-full text-sm font-semibold whitespace-nowrap px-6 focus:outline-none focus:ring-2 bg-slate-700 text-slate-100 hover:bg-slate-600 hover:text-white focus:ring-slate-500 md:block hidden">
         <Link href="/createblog">
           <div className="flex basis-1/4 flex-row-reverse p-2">

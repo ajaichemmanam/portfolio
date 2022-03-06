@@ -1,6 +1,6 @@
 import { CodeIcon } from "@heroicons/react/solid";
 import Layout from "../components/layout";
-
+import Head from "next/head";
 var projects = [
   {
     title: "Emovere - An Emotion Recognition App",
@@ -161,7 +161,7 @@ export function ProjectsView() {
           </h1>
         </div>
         <p className="lg:w-2/3 mx-auto mb-20 leading-relaxed text-base">
-          A short glimpse of my past works. 
+          A short glimpse of my past works.
           {/* Source code for some of the projects
           are private (NDA Agreement/Client policy). */}
         </p>
@@ -200,6 +200,23 @@ export default function Projects() {
   return (
     <div className="App">
       <Layout>
+        <Head>
+          <title>Projects - Ajai Chemmanam</title>
+          <meta
+            name="description"
+            content={`Lists some of the projects I've worked on.`}
+          />
+          <meta property="og:title" content={`Projects - Ajai Chemmanam`} />
+          <meta
+            property="og:description"
+            content={`Learn more about previous works done by Ajai Chemmanam`}
+          />
+          <meta
+            property="og:url"
+            content={`https://ajaichemmanam.vercel.app/projects`}
+          />
+          <meta property="og:type" content="website" />
+        </Head>
         <ProjectsView />
       </Layout>
     </div>

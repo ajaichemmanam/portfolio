@@ -5,7 +5,6 @@ export default function Layout({ children }) {
   return (
     <div>
       <Head>
-        <title>Ajai Chemmanam - Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />

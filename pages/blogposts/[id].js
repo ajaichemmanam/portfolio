@@ -2,6 +2,7 @@ import Link from "next/link";
 import Layout from "../../components/layout";
 import MarkDownFormatter from "../../components/markdown";
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import Head from "next/head";
 
 export async function getStaticProps({ params }) {
   const postData = getPostData(params.id);
@@ -24,6 +25,25 @@ export default function BlogPost({ postData }) {
   console.log("BlogPost", postData);
   return (
     <Layout>
+      <Head>
+        <title>{postData.title}</title>
+        <meta
+          name="description"
+          content={`Learn more about ${postData.title}`}
+        />
+        <meta property="og:title" content={`${postData.title}`} />
+        <meta
+          property="og:description"
+          content={`Learn more about ${postData.title}`}
+        />
+        <meta
+          property="og:url"
+          content={`https://ajaichemmanam.vercel.app/blogposts/${postData.id}`}
+        />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <div className="mx-auto mt-10 px-4 pb-28 sm:mt-16 sm:px-6 md:px-8 xl:px-12 xl:max-w-6xl">
         <article className="relative pt-10 max-w-3xl mx-auto xl:max-w-none xl:grid xl:grid-cols-[1fr_50rem] xl:gap-x-8">
           <div className="hidden mb-5 pb-5 border-b border-slate-200/5 xl:block">
