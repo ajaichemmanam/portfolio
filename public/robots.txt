@@ -1,9 +1,5 @@
-# Allow all user agents.
 User-agent: *
 Allow: /
 
-User-agent: *
-Disallow: /projects
-
-User-agent: *
 Sitemap: https://ajaichemmanam.vercel.app/sitemap.xml
+Sitemap: https://www.ajaichemmanam.vercel.app/sitemap.xml
