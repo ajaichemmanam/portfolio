@@ -1,4 +1,4 @@
-import fs from "fs";
+// import fs from "fs";
 import { getAllPostIds } from "../lib/posts";
 
 const Sitemap = () => {};
@@ -9,31 +9,7 @@ export const getServerSideProps = async ({ res }) => {
     production: "https://ajaichemmanam.vercel.app",
   }[process.env.NODE_ENV];
 
-  const staticPages = fs
-    .readdirSync(
-      {
-        development: "pages",
-        production: "./",
-      }[process.env.NODE_ENV]
-    )
-    .filter((staticPage) => {
-      return ![
-        "api",
-        "blogposts",
-        "about.js",
-        "index.js",
-        "skills.js",
-        "testimonials.js",
-        "contact.js",
-        "_app.js",
-        "_document.js",
-        "_error.js",
-        "sitemap.xml.js",
-      ].includes(staticPage);
-    })
-    .map((staticPagePath) => {
-      return `${baseUrl}/${staticPagePath.split(".")[0]}`;
-    });
+  const staticPages = ["projects", "research", "blogs", "portfolio"];
 
   const posts = await getAllPostIds();
 
@@ -46,10 +22,10 @@ export const getServerSideProps = async ({ res }) => {
     <priority>1.0</priority>
   </url>
       ${staticPages
-        .map((url) => {
+        .map((staticPage) => {
           return `
             <url>
-              <loc>${url}</loc>
+              <loc>${baseUrl}/${staticPage}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
               <changefreq>monthly</changefreq>
               <priority>1.0</priority>
