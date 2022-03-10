@@ -1,5 +1,5 @@
 // import fs from "fs";
-import { getAllPostIds } from "../lib/posts";
+import { getAllPostIds, getPostData } from "../lib/posts";
 
 const Sitemap = () => {};
 
@@ -18,7 +18,7 @@ export const getServerSideProps = async ({ res }) => {
     <url>
     <loc>${baseUrl}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>always</changefreq>
     <priority>1.0</priority>
   </url>
       ${staticPages
@@ -27,20 +27,21 @@ export const getServerSideProps = async ({ res }) => {
             <url>
               <loc>${baseUrl}/${staticPage}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
-              <changefreq>monthly</changefreq>
-              <priority>1.0</priority>
+              <changefreq>daily</changefreq>
+              <priority>0.9</priority>
             </url>
           `;
         })
         .join("")}
       ${posts
         .map((post) => {
+          const postData = getPostData(post.params.id);
           return `
               <url>
                 <loc>${baseUrl}/blogposts/${post.params.id}</loc>
-                <lastmod>${new Date().toISOString()}</lastmod>
-                <changefreq>monthly</changefreq>
-                <priority>1.0</priority>
+                <lastmod>${new Date(postData.date).toISOString()}</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.7</priority>
               </url>
             `;
         })
