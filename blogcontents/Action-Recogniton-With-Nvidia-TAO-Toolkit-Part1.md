@@ -7,10 +7,12 @@ date: "2022-02-23"
 ## Introdution to TAO and TAO Toolkit
 
 Nvidia Train Adapt Optimize (TAO) Toolkit is a Python based AI toolkit for development of purpose-built AI models and customizing them with users' own data.
-![TAO](https://developer.nvidia.com/sites/default/files/akamai/NGC-TAO-Web-Page-Updates-DZ-GTC21-1963548-pretrained-models-r4.png)
+
+![TAO](/static/blogImages/tao.png)
 
 The overall architecture consists of two parts Nvidia-TAO (Frontend) and Nvidia Tao Toolkit (Backend).
-![TAO](https://developer.nvidia.com/sites/default/files/akamai/tlt-tao-toolkit-bring-your-own-model-diagram.svg)
+
+![TAO](/static/blogImages/tao-toolkit.svg)
 
 ### TAO
 

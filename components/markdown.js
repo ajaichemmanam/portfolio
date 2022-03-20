@@ -2,6 +2,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import gfm from "remark-gfm";
 import Markdown from "react-markdown";
+import Image from "next/image";
 
 export default function MarkDownFormatter({ markdown }) {
   return (
@@ -10,6 +11,18 @@ export default function MarkDownFormatter({ markdown }) {
         remarkPlugins={[gfm]}
         className="h-auto min-h-[30rem]"
         components={{
+          img: (image) => {
+            return (
+              <div className="h-80 relative">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            );
+          },
           code({ node, inline, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || "");
             return !inline && match ? (

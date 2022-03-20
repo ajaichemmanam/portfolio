@@ -50,9 +50,11 @@ Type `xclock` or `xclock -digital` to open clock. It's actually a Ubuntu app but
 ![Digital Clock through xQuartz](/static/blogImages/xquartz-clock-digital.png)
 
 Now type `xcalc` to open up a calculator from remote machine
+
 ![Calculator through xQuartz](/static/blogImages/xquartz-calc.png)
 
 To open a web browser, type `firefox` or `firefox http://www.google.com` to open the Firefox from remote Ubuntu machine.
+
 ![Firefox through xQuartz](/static/blogImages/xquartz-firefox.png)
 
 The performance of the display is a bit poor, even with a good internet connection. But it can be beneficial to see some output images or graphs than interacting with it.
