@@ -112,9 +112,11 @@ export default function Blogs({ allPostsData }) {
                 className="relative flex flex-col max-w-3xl lg:ml-auto xl:max-w-none xl:w-[50rem]"
                 key={id}
               >
-                <div className="mb-4 text-xl text-slate-200 tracking-tight font-bold">
-                  {title}
-                </div>
+                <Link href={`/blogposts/${id}`}>
+                  <div className="mb-4 text-xl text-slate-200 tracking-tight font-bold cursor-pointer">
+                    {title}
+                  </div>
+                </Link>
                 <div className="text-sm leading-6 text-slate-400 lg:absolute lg:top-0 lg:right-full lg:mr-8 lg:whitespace-nowrap">
                   {date}
                 </div>
