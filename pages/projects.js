@@ -1,15 +1,16 @@
 import { CodeIcon } from "@heroicons/react/solid";
 import Layout from "../components/layout";
 import Head from "next/head";
+import Image from "next/image";
 var projects = [
   {
     title: "Emovere - An Emotion Recognition App",
     subtitle: "C#, Microsoft UWP, Tensorflow, Python, Keras",
     description:
-      "A Microsoft UWP app that uses Tensorflow and Keras to detect emotions",
+      "A Microsoft UWP app that uses Tensorflow and Keras to detect emotions. The app is able to detect faces and 7 emotions such as anger, disgust, fear, happy, sad, surprise, neutral.",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/Emovere-ML/master/assets/emovere.png",
-    link: "https://github.com/ajaichemmanam/",
+    link: "https://github.com/ajaichemmanam/Emovere-ML",
   },
   {
     title: "React 3D Keypad/ Keyboard",
@@ -43,22 +44,21 @@ var projects = [
       "UI for chatbots capable of showing multimedia contents, such as images, videos, and audio.",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/react_chatbot_ui/master/assets/ui.png",
-    link: "https://github.com/ajaichemmanam/chatbot",
+    link: "https://github.com/ajaichemmanam/react_chatbot_ui",
   },
   {
     title: "Conversation Systems with RASA",
     subtitle: "Rasa NLP",
     description:
       "Locally hosted conversational chatbot that can be trained and deployed onpremise using RASA NLP Framework.",
-    image:
-      "https://s3-us-west-2.amazonaws.com/spaceocanadawp/2019/12/rasa-chatbot.png",
+    image: "/static/projectImages/rasa.png",
     link: "https://github.com/ajaichemmanam/rasachatbot",
   },
   {
     title: "Chatbots with Azure Cognitive Services",
     subtitle: "Microsoft Azure, ReactJS",
     description:
-      "Intelligent Conversation systems to showcase product features, image and multimedia contents about products to help users make their choices",
+      "Intelligent Conversation systems to showcase product features, image and multimedia contents about products to help users make their choices. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/chatbot.png",
     link: "https://github.com/ajaichemmanam/chatbot",
   },
@@ -66,7 +66,7 @@ var projects = [
     title: "Intelligent Cab Routing Platform",
     subtitle: "Python, Flask, ReactJS",
     description:
-      "Solving the problem of finding the best cab route for a user based on their destination, cab capacity and time of arrival",
+      "Solving the problem of finding the best cab route for a user based on their destination, cab capacity and time of arrival. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/cabrouting.png",
     link: "https://github.com/ajaichemmanam/cabrouting",
   },
@@ -74,7 +74,7 @@ var projects = [
     title: "Simulators for IoT Devices",
     subtitle: "Microsoft Azure IoT Hub, ReactJS",
     description:
-      "Simulators to showcase the functionality of IoT devices like sensors, actuators, actuator controllers, etc.",
+      "Simulators to showcase the functionality of IoT devices like sensors, actuators, actuator controllers, etc. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/Hvac_simulator.png",
     link: "https://github.com/ajaichemmanam/deviceSimulator_CSharp",
   },
@@ -82,7 +82,7 @@ var projects = [
     title: "Remote Monitoring IOT Devices",
     subtitle: "Microsoft Azure IoT Hub, ReactJS",
     description:
-      "Remote Monitoring Solution for IoT devices using ReactJS and Azure IoT Hub",
+      "Remote Monitoring Solution for IoT devices using ReactJS and Azure IoT Hub. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/remote_monitoring.png",
     link: "https://github.com/ajaichemmanam/remoteMonitoring-webui",
   },
@@ -90,7 +90,7 @@ var projects = [
     title: "Connected Vehicles",
     subtitle: "Microsoft Azure IoT Hub, ReactJS",
     description:
-      "Fleet Monitoring and Management System for connected vehicles. Geo-fencing, speed, traffic based alerts are generated",
+      "Fleet Monitoring and Management System for connected vehicles. Geo-fencing, speed, traffic based alerts are generated. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/connected_vehicles.png",
     link: "https://github.com/ajaichemmanam/connectedVechicle-webui",
   },
@@ -172,14 +172,17 @@ export function ProjectsView() {
               key={project.image}
               className="sm:w-1/2 w-100 p-4"
             >
-              <div className="flex relative">
-                <img
-                  alt="gallery"
-                  className="absolute inset-0 w-full h-full object-cover object-center"
-                  src={project.image}
-                  height={120}
-                />
-                <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+              <div className="flex relative h-72">
+                <div className="absolute inset-0 w-full">
+                  <Image
+                    src={project.image}
+                    alt={project.title + " gallery"}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                  />
+                </div>
+                <div className="px-8 py-16 w-full relative z-8 border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
                   <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
                     {project.subtitle}
                   </h2>
