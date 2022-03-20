@@ -44,9 +44,11 @@ const formatContent = (content) => {
 };
 export default function Blogs({ allPostsData }) {
   const [currentPage, setCurrentPage] = React.useState(1);
-  const [numpostperpage, setNumpostperpage] = React.useState(3);
+  const [numpostperpage, setNumpostperpage] = React.useState(4);
   const [totalPages, setTotalPages] = React.useState(
-    Math.floor(allPostsData.length / numpostperpage) + 1
+    allPostsData.length % numpostperpage == 0
+      ? Math.floor(allPostsData.length / numpostperpage)
+      : Math.floor(allPostsData.length / numpostperpage) + 1
   );
 
   let pageArray = new Array();
