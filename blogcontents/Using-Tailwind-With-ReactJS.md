@@ -1,7 +1,7 @@
 ---
 title: "Using Tailwind With ReactJS"
 author: "Ajai Chemmanam"
-date: "2022-03-14"
+date: "2022-03-15"
 ---
 
 Tailwind CSS and ReactJS framework are two most powerful tools for developing awesome frontend webapps available today.
