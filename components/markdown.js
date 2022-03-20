@@ -20,6 +20,10 @@ export default function MarkDownFormatter({ markdown }) {
                 children={String(children).replace(/\n$/, "")}
                 {...props}
               />
+            ) : inline ? (
+              <code className={className} {...props}>
+                {children}
+              </code>
             ) : (
               <div
                 className="overflow-auto p-2 m-2"
