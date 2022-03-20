@@ -10,6 +10,7 @@ var projects = [
       "A Microsoft UWP app that uses Tensorflow and Keras to detect emotions. The app is able to detect faces and 7 emotions such as anger, disgust, fear, happy, sad, surprise, neutral.",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/Emovere-ML/master/assets/emovere.png",
+    imageFit: "contain",
     link: "https://github.com/ajaichemmanam/Emovere-ML",
   },
   {
@@ -19,6 +20,7 @@ var projects = [
       "This web component remembers the touch pressure along with the number/key pressed, ensuring that the user should also know at what pressure the key was pressed during setup to unlock and get access.",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/react_3D_Keypad/master/assets/screenshot-keypad.png",
+    imageFit: "contain",
     link: "https://github.com/ajaichemmanam/react_3D_Keypad",
   },
   {
@@ -60,6 +62,7 @@ var projects = [
     description:
       "Intelligent Conversation systems to showcase product features, image and multimedia contents about products to help users make their choices. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/chatbot.png",
+    imageFit: "contain",
     link: "https://github.com/ajaichemmanam/chatbot",
   },
   {
@@ -68,6 +71,7 @@ var projects = [
     description:
       "Solving the problem of finding the best cab route for a user based on their destination, cab capacity and time of arrival. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/cabrouting.png",
+    imageFit: "contain",
     link: "https://github.com/ajaichemmanam/cabrouting",
   },
   {
@@ -84,6 +88,7 @@ var projects = [
     description:
       "Remote Monitoring Solution for IoT devices using ReactJS and Azure IoT Hub. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/remote_monitoring.png",
+    imageFit: "contain",
     link: "https://github.com/ajaichemmanam/remoteMonitoring-webui",
   },
   {
@@ -92,7 +97,17 @@ var projects = [
     description:
       "Fleet Monitoring and Management System for connected vehicles. Geo-fencing, speed, traffic based alerts are generated. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/connected_vehicles.png",
+    imageFit: "contain",
     link: "https://github.com/ajaichemmanam/connectedVechicle-webui",
+  },
+  {
+    title: "Kathai - React WebApp",
+    subtitle: "ReactJS, Google Firebase",
+    description:
+      "An email template generation webapp that can generate dynamic mailers customised for the users. Source code is private due to Non-Disclosure Agreement.",
+    image: "/static/projectImages/kathai.png",
+    imageFit: "contain",
+    link: "https://github.com/ajaichemmanam/",
   },
   {
     title: "Green Board Dashboard",
@@ -178,7 +193,7 @@ export function ProjectsView() {
                     src={project.image}
                     alt={project.title + " gallery"}
                     layout="fill"
-                    objectFit="cover"
+                    objectFit={project.imageFit ? project.imageFit : "cover"}
                     objectPosition="center"
                   />
                 </div>
