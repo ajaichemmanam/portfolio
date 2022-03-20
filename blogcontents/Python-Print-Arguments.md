@@ -1,10 +1,11 @@
 ---
-title: "Heard of Python Print Arguments?"
+title: "Heard of Arguments in Python Print command?"
 author: "Ajai Chemmanam"
 date: "2022-03-17"
 ---
 
 Did you know that the commonly used python print command had some useful arguments for all these times?
+As we all know, The print() prints a string (or any other object - the object will first get converted into a string) onto a screen.
 This blog introduces you to two arguments of print() in python. The sep and end arguments.
 
 Create a simple python .py file and copy the following content.
