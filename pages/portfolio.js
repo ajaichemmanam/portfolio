@@ -279,9 +279,8 @@ export function PortfolioView() {
                 </li>
                 <li className="mt-2.1 ml-1.5 text-sm leading-normal">
                   <span className="-ml-2 select-none">›</span>
-                  Studied about potential threats to neural network models and
-                  potential methods to mitigate them like adversarial training
-                  etc.
+                  Studied about threats to neural network models and potential
+                  methods to mitigate them like adversarial training etc.
                 </li>
               </ul>
             </section>
