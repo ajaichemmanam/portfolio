@@ -1,7 +1,7 @@
 ---
-title: "Pre-Rendering on NextJS"
+title: "NextJS Tutorial - PreRendering on NextJS"
 author: "Ajai Chemmanam"
-date: "2022-01-02"
+date: "2022-03-25"
 ---
 
 Next.js pre-renders every page by default.
