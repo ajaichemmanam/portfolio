@@ -553,6 +553,10 @@
   margin-bottom: 16px;
 }
 
+.markdown-body table {
+  color: black;
+}
+
 .markdown-body blockquote > :first-child {
   margin-top: 0;
 }
