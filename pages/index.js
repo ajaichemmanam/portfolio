@@ -26,6 +26,10 @@ export default function Home() {
             property="og:url"
             content={`https://ajaichemmanam.vercel.app/`}
           />
+          <meta
+            property="og:image"
+            content="https://ajaichemmanam.vercel.app/static/testimonialImages/ajai.jpeg"
+          />
           <meta property="og:type" content="website" />
         </Head>
         {/* <HomeNavbar /> */}
