@@ -5,6 +5,14 @@ import Image from "next/image";
 var testimonials = [
   {
     quote:
+      "You rarely find stand out talent like Ajai! I had the opportunity to work with him at ITC infotech and on some OSS projects. He is willing to learn and solve loosely defined cutting-edge problems, shuffle between different tasks, help others, contribute to the OSS community. Someone like Ajai will be an asset to any organization.",
+    image: "/static/testimonialImages/sooraj.jpeg",
+    profileUrl: "https://www.linkedin.com/in/soorajsanker",
+    name: "Sooraj Sanker",
+    company: "Engineer at Hasura",
+  },
+  {
+    quote:
       "I had worked with Ajai during my masters as well as during my Research at Cochin University of Science and Technology. Ajai is a good mentor and a wonderful educator. He is totally dependable, self-driven enthusiastic individual. His passion for research in AI and ML is honorable. We had collaborated on certain research works in the domain of computer vision and time series analysis. His problem-solving skills are exemplary. I am pleased to recommend Ajai, for any job or research in AI/ML. He will be a valuable asset to your Team. I wish him all the best in his future endeavors.",
     image: "/static/testimonialImages/edwinjose.jpeg",
     profileUrl: "https://www.linkedin.com/in/edwinjosechittilappilly",
