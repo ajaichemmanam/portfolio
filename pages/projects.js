@@ -2,6 +2,36 @@ import { CodeIcon } from "@heroicons/react/solid";
 import Layout from "../components/layout";
 import Head from "next/head";
 import Image from "next/image";
+import ReactPlayer from "react-player/lazy";
+
+function ProjectCard(project) {
+  return (
+    <div className="sm:w-1/2 w-100 p-4">
+      <div className="flex relative h-72">
+        <div className="absolute inset-0 w-full px-8 py-12 border-4 border-gray-800 bg-gray-900">
+          <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
+            {project.subtitle}
+          </h2>
+          <h1 className="title-font text-lg font-medium text-white mb-3">
+            {project.title}
+          </h1>
+          <p className="leading-relaxed">{project.description}</p>
+        </div>
+        <div className="w-full relative z-8 border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+          <ReactPlayer
+            url={project.video}
+            playing={true}
+            loop={true}
+            width="100%"
+            height="100%"
+            controls={true}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 var projects = [
   {
     title: "Emovere - An Emotion Recognition App",
@@ -12,6 +42,16 @@ var projects = [
       "https://raw.githubusercontent.com/ajaichemmanam/Emovere-ML/master/assets/emovere.png",
     imageFit: "contain",
     link: "https://github.com/ajaichemmanam/Emovere-ML",
+  },
+  {
+    title: "Delivery Optimisation App",
+    subtitle: "C#, Javascript, Dotnet, React",
+    description:
+      "A sample app developed for GSoft to show ideal transit type for each product",
+    image:
+      "https://raw.githubusercontent.com/ajaichemmanam/gsoft_dotnet_react/main/Screenshots/screen1.png",
+    imageFit: "contain",
+    link: "https://github.com/ajaichemmanam/gsoft_dotnet_react",
   },
   {
     title: "React 3D Keypad/ Keyboard",
@@ -101,6 +141,38 @@ var projects = [
     link: "https://github.com/ajaichemmanam/connectedVechicle-webui",
   },
   {
+    title: "Identifying and Tracking People ",
+    subtitle: "Python, AI/ML",
+    description:
+      "Detection, Identification and Tracking people has a lot of use cases in retail, manufacturing, and other industries. This project is a proof of concept for tracking employees in a store. Hover here to see the video demo.",
+    video: "static/projectVideos/people_tracking.mp4",
+    link: "https://github.com/ajaichemmanam",
+  },
+  {
+    title: "Vehicle Tracking",
+    subtitle: "Python, AI/ML",
+    description:
+      "Detection and Tracking of vehicles along with their attributes such as colour, vehicle type etc. This project is a proof of concept for tracking vehicles in a highway. Hover here to see the video demo.",
+    video: "static/projectVideos/vehicle_attributes.mp4",
+    link: "https://github.com/ajaichemmanam",
+  },
+  {
+    title: "Restaurant Management",
+    subtitle: "Python, AI/ML",
+    description:
+      "Managment of large restaurant chains often find it difficult to verify whether the guidelines and protocols are being followed by all their outlets. This project tries to identify the time for cleaning the table once the customers leave the restaurant.",
+    video: "static/projectVideos/table1.demo.mp4",
+    link: "https://github.com/ajaichemmanam",
+  },
+  {
+    title: "Parking Lot Managment",
+    subtitle: "Python, AI/ML",
+    description:
+      "This automated system keeps track of the parking lot and the vehicles that are parked in it. It can identify free lots as well as identify the time for which the vehicle is parked in the lot.",
+    video: "static/projectVideos/parking_time.mp4",
+    link: "https://github.com/ajaichemmanam",
+  },
+  {
     title: "Kathai - React WebApp",
     subtitle: "ReactJS, Google Firebase",
     description:
@@ -181,34 +253,53 @@ export function ProjectsView() {
           are private (NDA Agreement/Client policy). */}
         </p>
         <div className="flex flex-wrap -m-4">
-          {projects.map((project) => (
-            <a
-              href={project.link}
-              key={project.image}
-              className="sm:w-1/2 w-100 p-4"
-            >
-              <div className="flex relative h-72">
-                <div className="absolute inset-0 w-full">
-                  <Image
-                    src={project.image}
-                    alt={project.title + " gallery"}
-                    layout="fill"
-                    objectFit={project.imageFit ? project.imageFit : "cover"}
-                    objectPosition="center"
-                  />
+          {projects.map((project) =>
+            project.video ? (
+              ProjectCard(project)
+            ) : (
+              // <div className="sm:w-1/2 w-100 p-4">
+              //   <div className="flex relative h-72" key={project.video}>
+              //     <div className="w-full relative z-8 border-4 border-gray-800 bg-gray-900">
+              //       <ReactPlayer
+              //         url={project.video}
+              //         playing={true}
+              //         loop={true}
+              //         width="100%"
+              //         height="100%"
+              //         controls={true}
+              //       />
+              //       <a href={project.link}>{project.title}</a>
+              //     </div>
+              //   </div>
+              // </div>
+              <a
+                href={project.link}
+                key={project.image}
+                className="sm:w-1/2 w-100 p-4"
+              >
+                <div className="flex relative h-72">
+                  <div className="absolute inset-0 w-full">
+                    <Image
+                      src={project.image}
+                      alt={project.title + " gallery"}
+                      layout="fill"
+                      objectFit={project.imageFit ? project.imageFit : "cover"}
+                      objectPosition="center"
+                    />
+                  </div>
+                  <div className="px-8 py-16 w-full relative z-8 border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                    <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
+                      {project.subtitle}
+                    </h2>
+                    <h1 className="title-font text-lg font-medium text-white mb-3">
+                      {project.title}
+                    </h1>
+                    <p className="leading-relaxed">{project.description}</p>
+                  </div>
                 </div>
-                <div className="px-8 py-16 w-full relative z-8 border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                  <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
-                    {project.subtitle}
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-white mb-3">
-                    {project.title}
-                  </h1>
-                  <p className="leading-relaxed">{project.description}</p>
-                </div>
-              </div>
-            </a>
-          ))}
+              </a>
+            )
+          )}
         </div>
       </div>
     </section>
