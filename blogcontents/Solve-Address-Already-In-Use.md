@@ -31,6 +31,12 @@ kill -9 $(lsof -ti:3000)
 kill -9 $(lsof -ti:3000,3001)
 ```
 
+For Linux/Ubuntu systems:
+
+```bash
+sudo kill -9 `sudo lsof -t -i:3000`
+```
+
 To do this every time when a node server starts up.
 
 Add to package.json file as follows
