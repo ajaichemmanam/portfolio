@@ -8,10 +8,24 @@ date: "2022-04-08"
 
 Object detection is a task in computer vision, which requires the algorithm to predict a bounding box with a category label (class) for each region of interest (ROI) in an image.
 
-### Anchored Object Detection
+### What are anchor bozes?
 
+Anchor Boxes are used to represent ideal shape and size of object the model predicts.
 Anchor boxes are pre determined boxes at different positions of an image with varying sizes and aspect ratio.
 These are determined by analysing the training data, where and how the most common annotations are present.
+
+#### Advantages
+
+- Enables predictor to detect the objects shape ,size and location for better detection
+
+#### Disadvantages
+
+- The model might not predict objects much smaller than the anchor box.
+- The model might not predict objects much larger than the anchor box.
+
+### Anchored Object Detection
+
+Anchored object detection algorithms uses 1000s of Anchor Boxes to determine regions of interest for classifying them as a potential candidate for an object. When more than one anchor box corresponds to an object, their IOU is taken and the label corresponding to highest score is selected.
 
 Conventionally, anchor boxes are considered key for detectors.
 
