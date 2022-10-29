@@ -1,6 +1,7 @@
 import { AcademicCapIcon } from "@heroicons/react/solid";
 import Layout from "../components/layout";
 import Head from "next/head";
+import Image from "next/image";
 var research_projects = [
   {
     title:
@@ -9,8 +10,9 @@ var research_projects = [
     description:
       "Published in Artificial Intelligence Driven Circuits and Systems",
     image:
-      "https://media.springernature.com/w306/springer-static/cover-hires/book/978-981-16-6940-8",
-    imageclass: "object-cover object-center",
+      // "https://media.springernature.com/w306/springer-static/cover-hires/book/978-981-16-6940-8",
+      "/static/researchImages/artificial_intelligence_driven_circuits_and_systems.png",
+    objectPosition: "center",
     link: "https://link.springer.com/chapter/10.1007/978-981-16-6940-8_13",
   },
   {
@@ -19,7 +21,7 @@ var research_projects = [
     description:
       "Published in International Conference on Data Science and Engineering (ICDSE 2021), IIT Patna",
     image: "/static/researchImages/joint_learning.png",
-    imageclass: "object-cover object-top",
+    objectPosition: "top",
     link: "#",
   },
   {
@@ -27,7 +29,7 @@ var research_projects = [
     subtitle: "Ajai John Chemmanam, Bijoy A. Jose, Asif Moopan",
     description: "In Process of Submission",
     image: "/static/researchImages/lsh.png",
-    imageclass: "object-cover object-top",
+    objectPosition: "top",
     link: "#",
   },
   {
@@ -35,7 +37,7 @@ var research_projects = [
     subtitle: "Ajai John Chemmanam, Shahanaz N., Bijoy A. Jose",
     description: "In Process of Submission",
     image: "/static/researchImages/niqe.png",
-    imageclass: "object-cover object-top",
+    objectPosition: "top",
     link: "#",
   },
   {
@@ -46,7 +48,7 @@ var research_projects = [
     description:
       "Published in: 2019 7th International Conference on Smart Computing & Communications (ICSCC)",
     image: "/static/researchImages/Face_Tracking_Robot_IEEE.png",
-    imageclass: "object-cover object-top",
+    objectPosition: "top",
     link: "https://ieeexplore.ieee.org/abstract/document/8843628",
   },
   {
@@ -56,7 +58,7 @@ var research_projects = [
     description:
       "Published in: 2020 International Symposium on Networks, Computers and Communications (ISNCC)",
     image: "/static/researchImages/construction_safety.png",
-    imageclass: "object-cover object-top",
+    objectPosition: "top",
     link: "https://ieeexplore.ieee.org/abstract/document/9297198",
   },
   {
@@ -66,7 +68,7 @@ var research_projects = [
     description:
       "Published in: 2017 International Conference on Computer Communication and Informatics (ICCCI)",
     image: "/static/researchImages/portable_evoting.png",
-    imageclass: "object-cover object-top",
+    objectPosition: "top",
     link: "https://ieeexplore.ieee.org/abstract/document/8117785",
   },
   {
@@ -77,7 +79,7 @@ var research_projects = [
     description:
       "Published in: Journal of Information Science and Engineering, Vol. 36 No. 5, pp. 1055-1067",
     image: "/static/researchImages/jise_face_tracking.png",
-    imageclass: "object-cover object-top",
+    objectPosition: "top",
     link: "https://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=176_2358",
   },
 ];
@@ -106,14 +108,25 @@ export function ResearchView() {
               key={project.image}
               className="sm:w-1/2 w-100 p-4"
             >
-              <div className="flex relative">
-                <img
+              <div className="flex relative h-72">
+                <div className="absolute inset-0 w-full overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title + " gallery"}
+                    fill={true}
+                    // layout="fill"
+                    // objectFit={project.imageFit ? project.imageFit : "cover"}
+                    objectFit={"cover"}
+                    objectPosition={project.objectPosition}
+                  />
+                </div>
+                {/* <img
                   alt="gallery"
                   className={
                     "absolute inset-0 w-full h-full " + project.imageclass
                   }
                   src={project.image}
-                />
+                /> */}
                 <div className="px-8 py-10 relative z-8 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
                   <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
                     {project.subtitle}
