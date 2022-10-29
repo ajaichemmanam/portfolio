@@ -257,31 +257,17 @@ export function ProjectsView() {
             project.video ? (
               ProjectCard(project)
             ) : (
-              // <div className="sm:w-1/2 w-100 p-4">
-              //   <div className="flex relative h-72" key={project.video}>
-              //     <div className="w-full relative z-8 border-4 border-gray-800 bg-gray-900">
-              //       <ReactPlayer
-              //         url={project.video}
-              //         playing={true}
-              //         loop={true}
-              //         width="100%"
-              //         height="100%"
-              //         controls={true}
-              //       />
-              //       <a href={project.link}>{project.title}</a>
-              //     </div>
-              //   </div>
-              // </div>
               <a
                 href={project.link}
                 key={project.image}
                 className="sm:w-1/2 w-100 p-4"
               >
                 <div className="flex relative h-72">
-                  <div className="absolute inset-0 w-full">
+                  <div className="absolute inset-0 w-full overflow-hidden">
                     <Image
                       src={project.image}
                       alt={project.title + " gallery"}
+                      fill={true}
                       layout="fill"
                       objectFit={project.imageFit ? project.imageFit : "cover"}
                       objectPosition="center"
