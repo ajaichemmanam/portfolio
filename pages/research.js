@@ -16,6 +16,15 @@ var research_projects = [
     link: "https://link.springer.com/chapter/10.1007/978-981-16-6940-8_13",
   },
   {
+    title: "Book Chapter: Joint Learning for Multi Tasking Models",
+    subtitle: "Ajai John Chemmanam, Bijoy A. Jose",
+    description:
+      "Responsible Data Science. Lecture Notes in Electrical Engineering, vol 940. Springer, Singapore",
+    image: "/static/researchImages/responsibledatascience.jpg",
+    objectPosition: "center",
+    link: "https://doi.org/10.1007/978-981-19-4453-6_11",
+  },
+  {
     title: "Joint Learning for Multi Tasking Models",
     subtitle: "Ajai John Chemmanam, Bijoy A. Jose",
     description:
