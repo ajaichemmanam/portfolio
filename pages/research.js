@@ -13,6 +13,7 @@ var research_projects = [
       // "https://media.springernature.com/w306/springer-static/cover-hires/book/978-981-16-6940-8",
       "/static/researchImages/artificial_intelligence_driven_circuits_and_systems.png",
     objectPosition: "center",
+    objectFit:"fill",
     link: "https://link.springer.com/chapter/10.1007/978-981-16-6940-8_13",
   },
   {
@@ -22,6 +23,7 @@ var research_projects = [
       "Responsible Data Science. Lecture Notes in Electrical Engineering, vol 940. Springer, Singapore",
     image: "/static/researchImages/responsibledatascience.jpg",
     objectPosition: "center",
+    objectFit:"fill",
     link: "https://doi.org/10.1007/978-981-19-4453-6_11",
   },
   {
@@ -30,6 +32,7 @@ var research_projects = [
     description:
       "Published in International Conference on Data Science and Engineering (ICDSE 2021), IIT Patna",
     image: "/static/researchImages/joint_learning.png",
+    objectFit:"cover",
     objectPosition: "top",
     link: "#",
   },
@@ -123,10 +126,10 @@ export function ResearchView() {
                     src={project.image}
                     alt={project.title + " gallery"}
                     fill={true}
-                    // layout="fill"
-                    // objectFit={project.imageFit ? project.imageFit : "cover"}
-                    objectFit={"cover"}
-                    objectPosition={project.objectPosition}
+                    style={{
+                      objectFit: project.objectFit ? project.objectFit : "cover",
+                      objectPosition: project.objectPosition
+                    }}
                   />
                 </div>
                 {/* <img
