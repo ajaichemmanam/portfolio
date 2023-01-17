@@ -37,6 +37,16 @@ var research_projects = [
     link: "#",
   },
   {
+    title: "A multi tasking model for Object Detection, Image Segmentation and Keypoint Estimation tasks",
+    subtitle: "Ajai John Chemmanam, Bijoy A. Jose, Asif Mooppan",
+    description:
+      "Published in Journal of Information Science and Engineering (JISE)",
+    image: "/static/researchImages/jise_multitasking.png",
+    objectFit:"cover",
+    objectPosition: "top",
+    link: "https://www.airitilibrary.com/Publication/alDetailedMesh?docid=10162364-202305-202212270003-202212270003-549-560",
+  },
+  {
     title: "Improved multi object tracking with Locality Sensitive Hashing",
     subtitle: "Ajai John Chemmanam, Bijoy A. Jose, Asif Moopan",
     description: "In Process of Submission",
