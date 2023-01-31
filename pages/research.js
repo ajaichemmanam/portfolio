@@ -10,7 +10,6 @@ var research_projects = [
     description:
       "Published in Artificial Intelligence Driven Circuits and Systems",
     image:
-      // "https://media.springernature.com/w306/springer-static/cover-hires/book/978-981-16-6940-8",
       "/static/researchImages/artificial_intelligence_driven_circuits_and_systems.png",
     objectPosition: "center",
     objectFit:"fill",
@@ -49,18 +48,18 @@ var research_projects = [
   {
     title: "Improved multi object tracking with Locality Sensitive Hashing",
     subtitle: "Ajai John Chemmanam, Bijoy A. Jose, Asif Moopan",
-    description: "In Process of Submission",
+    description: "Available in Elsevier SSRN",
     image: "/static/researchImages/lsh.png",
     objectPosition: "top",
-    link: "#",
+    link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4070391",
   },
   {
     title: "Fused Features for No Reference Image Quality Assessment",
     subtitle: "Ajai John Chemmanam, Shahanaz N., Bijoy A. Jose",
-    description: "In Process of Submission",
+    description: "Published in Taylor & Francis: The Imaging Science Journal",
     image: "/static/researchImages/niqe.png",
     objectPosition: "top",
-    link: "#",
+    link: "https://www.tandfonline.com/doi/abs/10.1080/13682199.2023.2167267",
   },
   {
     title:
