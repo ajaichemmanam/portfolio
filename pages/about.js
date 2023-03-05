@@ -10,7 +10,7 @@ export default function About() {
           </h1>
           <p className="mb-8 leading-relaxed">
             Researcher in Artificial Intelligence and Machine Learning.
-            <br />4 years of industry experience in building and deploying
+            <br />6 years of industry experience in building and deploying
             scalable products.
           </p>
           <div className="flex justify-center">

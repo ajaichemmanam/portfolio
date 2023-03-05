@@ -18,7 +18,7 @@ export default function Skills() {
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
             3 Years of research experience in AI and ML (Computer Vision).
-            <br /> 4 Years of industry experience in building and deploying
+            <br /> 6 Years of industry experience in building and deploying
             webapps for IoT Dashbords, Chatbots, AI enabled apps etc.
           </p>
         </div>
