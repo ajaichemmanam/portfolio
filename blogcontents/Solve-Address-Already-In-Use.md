@@ -47,7 +47,7 @@ Add to package.json file as follows
 }
 ```
 
-## Explaination
+## Explanation
 
 lsof -ti:3000 command return the PID (Process ID) of the process which is using the port.
 kill -9 command kills the process with the returned PID.

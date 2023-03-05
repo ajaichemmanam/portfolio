@@ -37,7 +37,7 @@ chmod 400 filename.pem
 
 You will now be able to login to the remote server using the .pem file
 
-## Explaination
+## Explanation
 
 The permission of the file decides which users/usergroups can access or execute it.
 A secret file like .pem needs more restricted permission to improve security.

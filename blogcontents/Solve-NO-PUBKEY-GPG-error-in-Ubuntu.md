@@ -29,6 +29,6 @@ gpg: Total number processed: 1
 gpg:               imported: 1
 ```
 
-## Explaination
+## Explanation
 
 The missing keys are fetched from keyserver.ubuntu.com

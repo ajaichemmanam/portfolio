@@ -29,6 +29,6 @@ You should see something like this.
 OK
 ```
 
-## Explaination
+## Explanation
 
 The error was thrown because Bazel Ubuntu PPA key has expired. We had to manually update your apt keyring with the new key.
