@@ -22,10 +22,10 @@ export const generateStaticParams = async () => {
 };
 
 export default function BlogPage(props: any) {
-  const slug = props.params.slug;
+  const { slug } = props.params;
   const post = getPostContent(slug);
   return (
-    <>
+    <div className="App">
       {/* <Head>
         <title>{post.data.title}</title>
         <meta
@@ -78,6 +78,6 @@ export default function BlogPage(props: any) {
           </div>
         </article>
       </div> */}
-    </>
+    </div>
   );
 }

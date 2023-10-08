@@ -7,8 +7,8 @@ export default function BlogsPage() {
   const currentPosts = getPostMetadata();
 
   return (
-    <>
+    <div className="App">
       <BlogCollections posts={currentPosts} />
-    </>
+    </div>
   );
 }
