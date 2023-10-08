@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import MarkDownFormatter from "../../../components/markdown";
-
+import BlogPost from "../../../components/BlogPost";
 import fs from "fs";
 import matter from "gray-matter";
 import getPostMetadata from "../../../lib/blogUtils";
@@ -45,7 +45,9 @@ export default function BlogPage(props: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
 
-      <div className="mx-auto py-8 ssm:px-6 md:px-8 xl:px-12 xl:max-w-6xl">
+      <BlogPost post={post} />
+
+      {/* <div className="mx-auto py-8 ssm:px-6 md:px-8 xl:px-12 xl:max-w-6xl">
         <article className="relative pt-10 max-w-3xl mx-auto xl:max-w-none xl:grid xl:grid-cols-[1fr_50rem] xl:gap-x-8">
           <div className="hidden mb-5 pb-5 border-b border-slate-200/5 xl:block">
             <Link
@@ -75,7 +77,7 @@ export default function BlogPage(props: any) {
             <MarkDownFormatter markdown={post.content} />
           </div>
         </article>
-      </div>
+      </div> */}
     </>
   );
 }
