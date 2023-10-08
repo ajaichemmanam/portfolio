@@ -1,8 +1,6 @@
 import { AcademicCapIcon } from "@heroicons/react/solid";
-import Layout from "../components/layout";
-import Head from "next/head";
 import Image from "next/image";
-var research_projects = [
+const research_projects = [
   {
     title:
       "Detecting Anomalies in Power Consumption of an Internet of Things Network Using Statistical Techniques",
@@ -12,7 +10,7 @@ var research_projects = [
     image:
       "/static/researchImages/artificial_intelligence_driven_circuits_and_systems.png",
     objectPosition: "center",
-    objectFit:"fill",
+    objectFit: "fill",
     link: "https://link.springer.com/chapter/10.1007/978-981-16-6940-8_13",
   },
   {
@@ -22,7 +20,7 @@ var research_projects = [
       "Responsible Data Science. Lecture Notes in Electrical Engineering, vol 940. Springer, Singapore",
     image: "/static/researchImages/responsibledatascience.jpg",
     objectPosition: "center",
-    objectFit:"fill",
+    objectFit: "fill",
     link: "https://doi.org/10.1007/978-981-19-4453-6_11",
   },
   {
@@ -31,17 +29,18 @@ var research_projects = [
     description:
       "Published in International Conference on Data Science and Engineering (ICDSE 2021), IIT Patna",
     image: "/static/researchImages/joint_learning.png",
-    objectFit:"cover",
+    objectFit: "cover",
     objectPosition: "top",
     link: "#",
   },
   {
-    title: "A multi tasking model for Object Detection, Image Segmentation and Keypoint Estimation tasks",
+    title:
+      "A multi tasking model for Object Detection, Image Segmentation and Keypoint Estimation tasks",
     subtitle: "Ajai John Chemmanam, Bijoy A. Jose, Asif Mooppan",
     description:
       "Published in Journal of Information Science and Engineering (JISE)",
     image: "/static/researchImages/jise_multitasking.png",
-    objectFit:"cover",
+    objectFit: "cover",
     objectPosition: "top",
     link: "https://www.airitilibrary.com/Publication/alDetailedMesh?docid=10162364-202305-202212270003-202212270003-549-560",
   },
@@ -105,7 +104,7 @@ var research_projects = [
   },
 ];
 
-export function ResearchView() {
+export default function ResearchView() {
   return (
     <section
       id="research_projects"
@@ -136,18 +135,11 @@ export function ResearchView() {
                     alt={project.title + " gallery"}
                     fill={true}
                     style={{
-                      objectFit: project.objectFit ? project.objectFit : "cover",
-                      objectPosition: project.objectPosition
+                      objectFit: project.objectFit || "cover",
+                      objectPosition: project.objectPosition,
                     }}
                   />
                 </div>
-                {/* <img
-                  alt="gallery"
-                  className={
-                    "absolute inset-0 w-full h-full " + project.imageclass
-                  }
-                  src={project.image}
-                /> */}
                 <div className="px-8 py-10 relative z-8 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
                   <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
                     {project.subtitle}
@@ -163,32 +155,5 @@ export function ResearchView() {
         </div>
       </div>
     </section>
-  );
-}
-
-export default function Research() {
-  return (
-    <div className="App">
-      <Layout>
-        <Head>
-          <title>Research - Ajai Chemmanam</title>
-          <meta
-            name="description"
-            content={`Discusses research findings published by Ajai Chemmanam`}
-          />
-          <meta property="og:title" content={`Research - Ajai Chemmanam`} />
-          <meta
-            property="og:description"
-            content={`Learn more about research contributions by Ajai Chemmanam`}
-          />
-          <meta
-            property="og:url"
-            content={`https://ajaichemmanam.vercel.app/research`}
-          />
-          <meta property="og:type" content="website" />
-        </Head>
-        <ResearchView />
-      </Layout>
-    </div>
   );
 }

@@ -1,8 +1,6 @@
 import { CodeIcon } from "@heroicons/react/solid";
-import Layout from "../components/layout";
-import Head from "next/head";
 import Image from "next/image";
-import ReactPlayer from "react-player/lazy";
+// import ReactPlayer from "react-player/lazy";
 
 function ProjectCard(project) {
   return (
@@ -18,21 +16,21 @@ function ProjectCard(project) {
           <p className="leading-relaxed">{project.description}</p>
         </div>
         <div className="w-full relative z-8 border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-          <ReactPlayer
+          {/* <ReactPlayer
             url={project.video}
             playing={true}
             loop={true}
             width="100%"
             height="100%"
             controls={true}
-          />
+          /> */}
         </div>
       </div>
     </div>
   );
 }
 
-var projects = [
+const projects = [
   {
     title: "Emovere - An Emotion Recognition App",
     subtitle: "C#, Microsoft UWP, Tensorflow, Python, Keras",
@@ -40,7 +38,7 @@ var projects = [
       "A Microsoft UWP app that uses Tensorflow and Keras to detect emotions. The app is able to detect faces and 7 emotions such as anger, disgust, fear, happy, sad, surprise, neutral.",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/Emovere-ML/master/assets/emovere.png",
-    imageFit: "contain",
+    imageFit: "object-contain",
     link: "https://github.com/ajaichemmanam/Emovere-ML",
   },
   {
@@ -50,7 +48,7 @@ var projects = [
       "A sample app developed for GSoft to show ideal transit type for each product",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/gsoft_dotnet_react/main/Screenshots/screen1.png",
-    imageFit: "contain",
+    imageFit: "object-contain",
     link: "https://github.com/ajaichemmanam/gsoft_dotnet_react",
   },
   {
@@ -60,7 +58,7 @@ var projects = [
       "This web component remembers the touch pressure along with the number/key pressed, ensuring that the user should also know at what pressure the key was pressed during setup to unlock and get access.",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/react_3D_Keypad/master/assets/screenshot-keypad.png",
-    imageFit: "contain",
+    imageFit: "object-contain",
     link: "https://github.com/ajaichemmanam/react_3D_Keypad",
   },
   {
@@ -69,6 +67,7 @@ var projects = [
     description: "A python implementation of Google's BodyPix model",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/simple_bodypix_python/master/assets/singlepose_partheatmaps.png",
+    imageFit: "object-cover",
     link: "https://github.com/ajaichemmanam/simple_bodypix_python",
   },
   {
@@ -77,6 +76,7 @@ var projects = [
     description: "A python implementation of Google's Posenet model",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/simple_bodypix_python/master/assets/singlepose.png",
+    imageFit: "object-cover",
     link: "https://github.com/ajaichemmanam/simple_posenet_python",
   },
   {
@@ -86,6 +86,7 @@ var projects = [
       "UI for chatbots capable of showing multimedia contents, such as images, videos, and audio.",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/react_chatbot_ui/master/assets/ui.png",
+    imageFit: "object-cover",
     link: "https://github.com/ajaichemmanam/react_chatbot_ui",
   },
   {
@@ -94,6 +95,7 @@ var projects = [
     description:
       "Locally hosted conversational chatbot that can be trained and deployed onpremise using RASA NLP Framework.",
     image: "/static/projectImages/rasa.png",
+    imageFit: "object-cover",
     link: "https://github.com/ajaichemmanam/rasachatbot",
   },
   {
@@ -102,7 +104,7 @@ var projects = [
     description:
       "Intelligent Conversation systems to showcase product features, image and multimedia contents about products to help users make their choices. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/chatbot.png",
-    imageFit: "contain",
+    imageFit: "object-contain",
     link: "https://github.com/ajaichemmanam/chatbot",
   },
   {
@@ -111,7 +113,7 @@ var projects = [
     description:
       "Solving the problem of finding the best cab route for a user based on their destination, cab capacity and time of arrival. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/cabrouting.png",
-    imageFit: "contain",
+    imageFit: "object-contain",
     link: "https://github.com/ajaichemmanam/cabrouting",
   },
   {
@@ -120,6 +122,7 @@ var projects = [
     description:
       "Simulators to showcase the functionality of IoT devices like sensors, actuators, actuator controllers, etc. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/Hvac_simulator.png",
+    imageFit: "object-cover",
     link: "https://github.com/ajaichemmanam/deviceSimulator_CSharp",
   },
   {
@@ -128,7 +131,7 @@ var projects = [
     description:
       "Remote Monitoring Solution for IoT devices using ReactJS and Azure IoT Hub. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/remote_monitoring.png",
-    imageFit: "contain",
+    imageFit: "object-contain",
     link: "https://github.com/ajaichemmanam/remoteMonitoring-webui",
   },
   {
@@ -137,7 +140,7 @@ var projects = [
     description:
       "Fleet Monitoring and Management System for connected vehicles. Geo-fencing, speed, traffic based alerts are generated. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/connected_vehicles.png",
-    imageFit: "contain",
+    imageFit: "object-contain",
     link: "https://github.com/ajaichemmanam/connectedVechicle-webui",
   },
   {
@@ -178,7 +181,7 @@ var projects = [
     description:
       "An email template generation webapp that can generate dynamic mailers customised for the users. Source code is private due to Non-Disclosure Agreement.",
     image: "/static/projectImages/kathai.png",
-    imageFit: "contain",
+    imageFit: "object-contain",
     link: "https://github.com/ajaichemmanam/",
   },
   {
@@ -188,6 +191,7 @@ var projects = [
       "Frontend Dashboard for Monitoring and Controlling a Hydroponic System, C3I center IIT Kanpur",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/greenBoard/master/assets/green_board.png",
+    imageFit: "object-cover",
     link: "https://github.com/ajaichemmanam/greenBoard",
   },
   {
@@ -197,6 +201,7 @@ var projects = [
       "Backend code for Monitoring and Controlling a Hydroponic System, C3I center IIT Kanpur",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/greenServer/master/diagram.jpg",
+    imageFit: "object-cover",
     link: "https://github.com/ajaichemmanam/greenServer",
   },
   {
@@ -206,6 +211,7 @@ var projects = [
       "A light weight android app to show Google Map built for Android GO devices.",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/Maps-Go/master/assets/mapgo.jpeg",
+    imageFit: "object-cover",
     link: "https://github.com/ajaichemmanam/Maps-Go",
   },
   {
@@ -215,6 +221,7 @@ var projects = [
       "This is a simple react app that connects to a hasura graphql and an azure function. This repo was created for learning how to use hasura graphql with react and process information serverless. It can serve as a boiler plate for similar projects.",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/graphql-react-image/master/assets/output.png",
+    imageFit: "object-cover",
     link: "https://github.com/ajaichemmanam/graphql-react-image",
   },
   {
@@ -224,6 +231,7 @@ var projects = [
       "An image super resolution project that uses pytorch lightning to train a model",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/SuperResolution/master/output.jpg",
+    imageFit: "object-cover",
     link: "https://github.com/ajaichemmanam/SuperResolution",
   },
   {
@@ -233,11 +241,12 @@ var projects = [
       "This project uses Posenet Model in TensorflowJS inside a React Webapp. It uses live webcam feed from the browser and runs the posenet model over it.",
     image:
       "https://raw.githubusercontent.com/ajaichemmanam/Posenet-ReactWebapp/master/docs/output.png",
+    imageFit: "object-cover",
     link: "https://github.com/ajaichemmanam/Posenet-ReactWebapp",
   },
 ];
 
-export function ProjectsView() {
+export default function ProjectsView() {
   return (
     <section id="projects" className="text-gray-400 bg-gray-900 body-font">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
@@ -268,9 +277,10 @@ export function ProjectsView() {
                       src={project.image}
                       alt={project.title + " gallery"}
                       fill={true}
-                      layout="fill"
-                      objectFit={project.imageFit ? project.imageFit : "cover"}
-                      objectPosition="center"
+                      className={
+                        "object-center rounded-lg " + project.imageFit ||
+                        "object-cover"
+                      }
                     />
                   </div>
                   <div className="px-8 py-16 w-full relative z-8 border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
@@ -289,31 +299,5 @@ export function ProjectsView() {
         </div>
       </div>
     </section>
-  );
-}
-export default function Projects() {
-  return (
-    <div className="App">
-      <Layout>
-        <Head>
-          <title>Projects - Ajai Chemmanam</title>
-          <meta
-            name="description"
-            content={`Lists some of the projects I've worked on.`}
-          />
-          <meta property="og:title" content={`Projects - Ajai Chemmanam`} />
-          <meta
-            property="og:description"
-            content={`Learn more about previous works done by Ajai Chemmanam`}
-          />
-          <meta
-            property="og:url"
-            content={`https://ajaichemmanam.vercel.app/projects`}
-          />
-          <meta property="og:type" content="website" />
-        </Head>
-        <ProjectsView />
-      </Layout>
-    </div>
   );
 }

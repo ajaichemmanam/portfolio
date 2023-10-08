@@ -1,3 +1,4 @@
+"use client";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import gfm from "remark-gfm";
@@ -17,8 +18,8 @@ export default function MarkDownFormatter({ markdown }) {
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  layout="fill"
-                  objectFit="contain"
+                  fill="responsive"
+                  className="object-contain object-fit"
                 />
               </div>
             );

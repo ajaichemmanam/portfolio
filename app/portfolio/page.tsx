@@ -1,8 +1,6 @@
-import { BookOpenIcon } from "@heroicons/react/solid";
-import Layout from "../components/layout";
 import Head from "next/head";
 
-export function PortfolioView() {
+export default function PortfolioPage() {
   return (
     <div
       className="
@@ -579,14 +577,5 @@ export function PortfolioView() {
     //     </div> */}
     //   </div>
     // </section>
-  );
-}
-export default function Portfolio() {
-  return (
-    <div className="App">
-      <Layout>
-        <PortfolioView />
-      </Layout>
-    </div>
   );
 }
