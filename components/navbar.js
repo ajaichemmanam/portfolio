@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <header className="bg-gray-800 md:sticky top-0 z-10 text-gray-800 dark:text-white">
+    <header className="bg-gray-800 sticky top-0 z-10 text-gray-800 dark:text-white">
       <div className="container mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center">
         <Link
           href="/"

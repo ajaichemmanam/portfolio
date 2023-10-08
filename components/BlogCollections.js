@@ -28,7 +28,7 @@ const formatContent = (content) => {
 };
 export default function BlogCollections({ posts }) {
   return (
-    <section className="min-h-[30rem] max-w-5xl mx-auto sm:px-6 md:px-8 xl:px-12 xl:max-w-6xl">
+    <section className="min-h-[30rem] px-4 max-w-5xl mx-auto sm:px-6 md:px-8 xl:px-12 xl:max-w-6xl">
       <h2 className="mb-4 p-4 text-3xl text-center sm:text-4xl tracking-tight text-slate-200 font-extrabold">
         All Blogs
       </h2>
