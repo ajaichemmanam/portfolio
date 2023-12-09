@@ -1,4 +1,16 @@
-import Head from "next/head";
+export const metadata = {
+  title: "Ajai Chemmanam - Portfolio",
+  description: "Portfolio of Ajai Chemmanam",
+  openGraph: {
+    title: "Ajai Chemmanam - Portfolio",
+    description: "Portfolio of Ajai Chemmanam",
+    url: "https://ajaichemmanam.vercel.app/portfolio",
+    siteName: "Ajai Chemmanam",
+    metadataBase: new URL("https://ajaichemmanam.vercel.app"),
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 export default function PortfolioView() {
   return (
@@ -15,21 +27,6 @@ export default function PortfolioView() {
       md:p-16
         "
     >
-      <Head>
-        <title>Ajai Chemmanam - Portfolio</title>
-        <meta name="description" content={`Portfolio of Ajai Chemmanam`} />
-        <meta property="og:title" content={`Ajai Chemmanam - Portfolio`} />
-        <meta
-          property="og:description"
-          content={`Portfolio of Ajai Chemmanam`}
-        />
-        <meta
-          property="og:url"
-          content={`https://ajaichemmanam.vercel.app/portfolio`}
-        />
-        <meta property="og:type" content="website" />
-      </Head>
-
       <header
         className="
             flex
@@ -41,11 +38,6 @@ export default function PortfolioView() {
             border-b-2 border-opacity-50 border-gray-400
           "
       >
-        {/* <div className="initials-container mr-5 text-base leading-none pb-3 pt-3 text-white bg-purple-400 font-medium px-3">
-          <div className="text-center text-2xl initial">A</div>
-          <div className="text-center text-2xl initial">J</div>
-          <div className="text-center text-2xl initial">C</div>
-        </div> */}
         <h1 className="print:text-6xl lg:text-6xl md:text-5xl mr-auto text-3xl font-semibold text-white pb-px">
           Ajai Chemmanam
         </h1>

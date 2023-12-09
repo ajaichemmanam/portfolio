@@ -1,5 +1,16 @@
 module.exports = {
   images: {
-    domains: ["ajaichemmanam.vercel.app", "raw.githubusercontent.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ajaichemmanam.vercel.app",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        pathname: "**",
+      },
+    ],
   },
 };

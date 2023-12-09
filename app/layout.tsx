@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "../styles/global.css";
 import HomeNavbar from "../components/homenavbar";
 import Navbar from "../components/navbar";
@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     template: `%s - Ajai Chemmanam`,
   },
   description: "Know more about Ajai Chemmanam",
+  metadataBase: new URL("https://ajaichemmanam.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -26,15 +27,17 @@ export const metadata: Metadata = {
     ],
   },
 
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
+};
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 interface RootLayoutProps {

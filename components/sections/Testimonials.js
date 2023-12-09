@@ -1,8 +1,7 @@
-import { TerminalIcon, UsersIcon } from "@heroicons/react/solid";
+import { UsersIcon } from "@heroicons/react/solid";
 import Head from "next/head";
-import Image from "next/image";
 
-var testimonials = [
+const testimonials = [
   {
     quote:
       "You rarely find stand out talent like Ajai! I had the opportunity to work with him at ITC infotech and on some OSS projects. He is willing to learn and solve loosely defined cutting-edge problems, shuffle between different tasks, help others, contribute to the OSS community. Someone like Ajai will be an asset to any organization.",
@@ -53,7 +52,7 @@ export default function Testimonials() {
         </h1>
         <div className="flex flex-wrap m-4">
           {testimonials.map((testimonial) => (
-            <div className="p-4 md:w-1/2 w-full">
+            <div className="p-4 md:w-1/2 w-full" key={testimonial}>
               <div className="h-full bg-gray-800 bg-opacity-40 p-8 rounded flex flex-col justify-between items-center">
                 <blockquote className="leading-relaxed relative mb-6 p-5 m-1">
                   {testimonial.quote}
