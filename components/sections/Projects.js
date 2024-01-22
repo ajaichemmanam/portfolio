@@ -1,6 +1,6 @@
 import { CodeIcon } from "@heroicons/react/solid";
 import Image from "next/image";
-// import ReactPlayer from "react-player/lazy";
+import VideoPlayer from "../videoPlayer";
 
 function ProjectCard(project) {
   return (
@@ -16,14 +16,7 @@ function ProjectCard(project) {
           <p className="leading-relaxed">{project.description}</p>
         </div>
         <div className="w-full relative z-8 border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-          {/* <ReactPlayer
-            url={project.video}
-            playing={true}
-            loop={true}
-            width="100%"
-            height="100%"
-            controls={true}
-          /> */}
+          <VideoPlayer url={project.video} />
         </div>
       </div>
     </div>
