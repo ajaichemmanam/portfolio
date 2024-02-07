@@ -38,7 +38,7 @@ export const getServerSideProps = async ({ res }) => {
           const postData = getPostData(post.params.id);
           return `
               <url>
-                <loc>${baseUrl}/blogposts/${post.params.id}</loc>
+                <loc>${baseUrl}/blogs/${post.params.id}</loc>
                 <lastmod>${new Date(postData.date).toISOString()}</lastmod>
                 <changefreq>weekly</changefreq>
                 <priority>0.7</priority>
