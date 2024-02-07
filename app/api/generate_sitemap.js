@@ -20,7 +20,7 @@ export const generateSitemap = async (posts) => {
 ${[...posts]
       .map(
         (post) => `<url>
-  <loc>${BASE_URL}/blogposts/${post.params.id}</loc>
+  <loc>${BASE_URL}/blogs/${post.params.id}</loc>
   <priority>0.80</priority>
 </url>`
       )
